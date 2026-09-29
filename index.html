@@ -9,7 +9,7 @@
     <meta property="og:title" content="MIZAN | Institutional Authority Assurance for AI">
     <meta property="og:description" content="The record of who authorised the machine.">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="assets/experience.css">
+    <link rel="stylesheet" href="assets/experience.css?v=authority-title-2">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   </head>
   <body>
@@ -52,7 +52,7 @@
     </header>
 
     <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="hero hero-intro" aria-labelledby="hero-title">
         <div class="container hero-grid">
           <div class="hero-copy reveal">
             <div class="eyebrow hero-eyebrow">Institutional authority assurance</div>
@@ -65,60 +65,132 @@
             </div>
           </div>
 
-          <div class="hero-art pictorial-map" aria-label="Institution, accountable people and an AI system connected through MIZAN">
-            <div class="visual-layer institution-layer">
-              <svg class="scene-icon institution-scene" viewBox="0 0 220 140" aria-hidden="true">
-                <circle class="scene-halo" cx="110" cy="68" r="58"/>
-                <path class="scene-gold" d="M49 55 L110 22 L171 55 Z"/>
-                <path d="M43 58 H177 M51 111 H169 M45 119 H175"/>
-                <path d="M61 61 V108 M82 61 V108 M103 61 V108 M124 61 V108 M145 61 V108 M166 61 V108"/>
-                <path class="scene-detail" d="M110 31 L151 53 H69 Z M54 64 H166"/>
-                <circle class="signal-dot" cx="110" cy="22" r="3"/>
-              </svg>
-              <div class="layer-caption"><span>01</span><strong>Institution</strong><small>Mandate</small></div>
-            </div>
+        </div>
+      </section>
 
-            <div class="visual-layer people-layer">
-              <svg class="scene-icon people-scene" viewBox="0 0 220 140" aria-hidden="true">
-                <ellipse class="scene-halo people-halo" cx="110" cy="110" rx="88" ry="22"/>
-                <circle class="accountability-ring" cx="110" cy="69" r="47"/>
-                <g class="supporting-person left-person"><circle cx="62" cy="59" r="12"/><path d="M45 105 V83 C45 73 52 68 62 68 C72 68 79 73 79 83 V105"/></g>
-                <g class="central-person"><circle cx="110" cy="43" r="15"/><path d="M88 108 V75 C88 63 97 58 110 58 C123 58 132 63 132 75 V108"/></g>
-                <g class="supporting-person right-person"><circle cx="158" cy="59" r="12"/><path d="M141 105 V83 C141 73 148 68 158 68 C168 68 175 73 175 83 V105"/></g>
-                <path class="scene-gold accountability-arc" d="M77 29 C96 15 126 14 147 29"/>
-                <circle class="signal-dot" cx="148" cy="29" r="3"/>
-              </svg>
-              <div class="layer-caption"><span>02</span><strong>People</strong><small>Accountability</small></div>
-            </div>
+      <section class="authority-narrative" id="authority-story" aria-label="The institutional chain of authority">
+        <div class="authority-sticky">
+          <div class="authority-stage">
+            <article class="authority-scene authority-scene-institution" data-authority-scene="0">
+              <div class="authority-scene-copy">
+                <div class="authority-meta"><span>01</span><span>Authority layer</span></div>
+                <h2><span>Institution</span></h2>
+                <p>Mandate</p>
+              </div>
+              <div class="authority-scene-art" aria-hidden="true">
+                <svg class="authority-art institution-art" viewBox="0 0 700 700">
+                  <circle class="construction-circle" cx="330" cy="318" r="212"/>
+                  <path class="construction-arc" d="M94 364 A246 246 0 0 1 557 249 M150 455 A286 286 0 0 1 538 171"/>
+                  <path class="guide-lines" d="M178 92 V565 M330 62 V594 M486 106 V552 M88 468 H572"/>
+                  <path class="architectural-plane" d="M72 450 L286 324 L593 411 L365 548 Z"/>
+                  <path class="scene-gold" d="M168 292 L330 188 L492 292 Z"/>
+                  <path class="primary-line" d="M142 303 H518 M160 428 H500 M145 447 H516"/>
+                  <path class="primary-line" d="M190 310 V421 M236 310 V421 M282 310 V421 M328 310 V421 M374 310 V421 M420 310 V421 M466 310 V421"/>
+                  <path class="detail-line" d="M330 208 L455 286 H205 Z M180 321 H480"/>
+                  <circle class="authority-origin" cx="410" cy="130" r="6"/>
+                </svg>
+              </div>
+              <span class="authority-background-word" aria-hidden="true">Mandate</span>
+            </article>
 
-            <div class="visual-layer ai-layer">
-              <svg class="scene-icon ai-scene" viewBox="0 0 220 140" aria-hidden="true">
-                <ellipse class="ai-ring ring-a" cx="105" cy="70" rx="77" ry="34"/>
-                <ellipse class="ai-ring ring-b" cx="105" cy="70" rx="77" ry="34" transform="rotate(55 105 70)"/>
-                <ellipse class="ai-ring ring-c" cx="105" cy="70" rx="77" ry="34" transform="rotate(-55 105 70)"/>
-                <circle class="ai-sphere" cx="105" cy="70" r="39"/>
-                <path class="brain-line" d="M82 61 C85 45 103 43 107 55 C116 43 135 51 130 67 C140 76 132 94 117 91 C108 103 91 94 93 83 C78 81 73 68 82 61 Z"/>
-                <path class="scene-detail" d="M87 64 L101 74 L116 58 L129 76 M91 85 L105 74 L119 88"/>
-                <circle class="signal-dot data-a" cx="30" cy="70" r="3"/><circle class="signal-dot data-b" cx="155" cy="23" r="3"/><circle class="signal-dot data-c" cx="171" cy="99" r="3"/>
-              </svg>
-              <div class="layer-caption"><span>03</span><strong>AI system</strong><small>Operation</small></div>
-            </div>
+            <article class="authority-scene authority-scene-people" data-authority-scene="1">
+              <div class="authority-scene-copy">
+                <div class="authority-meta"><span>02</span><span>Authority layer</span></div>
+                <h2><span>People</span></h2>
+                <p>Accountability</p>
+              </div>
+              <div class="authority-scene-art" aria-hidden="true">
+                <svg class="authority-art people-art" viewBox="0 0 700 700">
+                  <circle class="construction-circle" cx="350" cy="344" r="211"/>
+                  <circle class="accountability-ring" cx="350" cy="344" r="150"/>
+                  <path class="dotted-orbit" pathLength="1" d="M112 356 C171 155 477 119 579 320 C645 450 506 577 337 570"/>
+                  <path class="people-links" d="M350 344 L211 402 M350 344 L489 402 M350 344 L350 522"/>
+                  <g class="support-person">
+                    <circle cx="211" cy="316" r="31"/><path d="M168 442 V370 C168 342 184 330 211 330 C238 330 254 342 254 370 V442"/>
+                  </g>
+                  <g class="central-person">
+                    <circle cx="350" cy="256" r="45"/><path d="M285 470 V362 C285 324 309 307 350 307 C391 307 415 324 415 362 V470"/>
+                  </g>
+                  <g class="support-person">
+                    <circle cx="489" cy="316" r="31"/><path d="M446 442 V370 C446 342 462 330 489 330 C516 330 532 342 532 370 V442"/>
+                  </g>
+                  <path class="scene-gold" d="M230 215 C292 159 406 151 483 208"/>
+                  <circle class="signal-node" cx="151" cy="425" r="5"/><circle class="signal-node" cx="543" cy="418" r="5"/><circle class="signal-node" cx="350" cy="525" r="5"/>
+                </svg>
+              </div>
+              <span class="authority-background-word" aria-hidden="true">Accountability</span>
+            </article>
 
-            <svg class="authority-thread" viewBox="0 0 520 620" aria-hidden="true">
-              <path class="thread-glow" d="M438 82 C459 170 421 218 442 302 C460 382 421 447 438 548"/>
-              <path class="thread-line" d="M438 82 C459 170 421 218 442 302 C460 382 421 447 438 548"/>
-              <path class="thread-energy" pathLength="100" d="M438 82 C459 170 421 218 442 302 C460 382 421 447 438 548"/>
-              <circle class="thread-signal" cx="0" cy="0" r="3">
-                <animateMotion dur="900ms" begin="indefinite" fill="freeze" path="M438 82 C459 170 421 218 442 302 C460 382 421 447 438 548"/>
-              </circle>
+            <article class="authority-scene authority-scene-ai" data-authority-scene="2">
+              <div class="authority-scene-copy">
+                <div class="authority-meta"><span>03</span><span>Authority layer</span></div>
+                <h2><span>AI system</span></h2>
+                <p>Operation</p>
+              </div>
+              <div class="authority-scene-art" aria-hidden="true">
+                <svg class="authority-art ai-art" viewBox="0 0 700 700">
+                  <ellipse class="orbit orbit-primary" cx="354" cy="355" rx="265" ry="112"/>
+                  <ellipse class="orbit orbit-secondary" cx="354" cy="355" rx="252" ry="92" transform="rotate(55 354 355)"/>
+                  <ellipse class="orbit orbit-secondary" cx="354" cy="355" rx="252" ry="92" transform="rotate(-55 354 355)"/>
+                  <ellipse class="orbit orbit-muted" cx="354" cy="355" rx="308" ry="174" transform="rotate(12 354 355)"/>
+                  <path class="dotted-orbit" pathLength="1" d="M74 484 C202 632 503 635 624 433"/>
+                  <circle class="ai-core" cx="354" cy="355" r="112"/>
+                  <path class="brain-line" d="M291 331 C299 282 347 275 360 314 C389 275 443 300 428 344 C457 371 434 420 392 410 C367 446 316 419 323 385 C280 381 264 347 291 331 Z"/>
+                  <path class="detail-line" d="M303 338 L343 371 L386 319 L422 377 M314 400 L355 371 L396 409"/>
+                  <path class="data-marks" d="M65 281 H124 M50 300 H102 M566 259 H643 M585 280 H662 M81 520 H148 M548 520 H625"/>
+                  <circle class="signal-node" cx="86" cy="355" r="6"/><circle class="signal-node" cx="516" cy="168" r="6"/><circle class="signal-node" cx="585" cy="473" r="6"/>
+                </svg>
+              </div>
+              <span class="authority-background-word" aria-hidden="true">Operation</span>
+            </article>
+
+            <article class="authority-scene authority-scene-resolution" data-authority-scene="3">
+              <div class="authority-scene-copy">
+                <div class="authority-meta"><span>04</span><span>Resolution</span></div>
+                <h2><span>MIZAN</span></h2>
+                <p>Authority record</p>
+                <div class="authority-summary"><span>Mandate</span><i></i><span>Accountability</span><i></i><span>Operation</span><i></i><strong>Authority record</strong></div>
+              </div>
+              <div class="authority-scene-art" aria-hidden="true">
+                <svg class="authority-art resolution-art" viewBox="0 0 700 700">
+                  <g class="resolution-trace trace-institution">
+                    <path d="M176 123 L280 60 L384 123 Z M155 132 H405 M174 218 H386"/>
+                    <path d="M195 139 V211 M229 139 V211 M263 139 V211 M297 139 V211 M331 139 V211 M365 139 V211"/>
+                  </g>
+                  <g class="resolution-trace trace-people">
+                    <circle cx="280" cy="319" r="72"/>
+                    <circle cx="280" cy="287" r="18"/><path d="M250 365 V327 C250 306 262 300 280 300 C298 300 310 306 310 327 V365"/>
+                    <circle cx="211" cy="326" r="12"/><circle cx="349" cy="326" r="12"/>
+                  </g>
+                  <g class="resolution-trace trace-ai">
+                    <ellipse cx="280" cy="470" rx="132" ry="52"/>
+                    <ellipse cx="280" cy="470" rx="118" ry="43" transform="rotate(56 280 470)"/>
+                    <ellipse cx="280" cy="470" rx="118" ry="43" transform="rotate(-56 280 470)"/>
+                    <circle cx="280" cy="470" r="48"/>
+                  </g>
+                  <path class="resolution-guides" d="M78 50 V590 M473 61 V601 M91 249 H524 M105 414 H566"/>
+                </svg>
+                <div class="authority-record">
+                  <span>M</span>
+                  <strong>MIZAN<small>Authority record</small></strong>
+                </div>
+              </div>
+              <span class="authority-background-word" aria-hidden="true">Authority</span>
+            </article>
+
+            <svg class="narrative-thread" viewBox="0 0 700 700" preserveAspectRatio="none" aria-hidden="true">
+              <path class="narrative-thread-glow" pathLength="1" d="M410 130 C470 205 338 260 400 335 C464 408 344 466 410 525 C440 558 447 570 455 576"/>
+              <path class="narrative-thread-line" pathLength="1" d="M410 130 C470 205 338 260 400 335 C464 408 344 466 410 525 C440 558 447 570 455 576"/>
+              <circle class="narrative-signal" cx="0" cy="0" r="4"/>
             </svg>
-            <div class="path-node mandate-node"><i></i><span>Mandate</span></div>
-            <div class="path-node authority-node"><i></i><span>Authority</span></div>
-            <div class="path-node accountability-node"><i></i><span>Accountability</span></div>
-            <div class="path-node operation-node"><i></i><span>Operation</span></div>
-            <div class="mizan-marker"><span>M</span><strong>MIZAN<small>Authority record</small></strong><em>Authority recorded</em></div>
-            <div class="visual-pulse pulse-one"></div>
-            <div class="visual-pulse pulse-two"></div>
+
+            <div class="narrative-node narrative-node-1"><i></i><span>01</span></div>
+            <div class="narrative-node narrative-node-2"><i></i><span>02</span></div>
+            <div class="narrative-node narrative-node-3"><i></i><span>03</span></div>
+
+            <div class="authority-progress" aria-hidden="true">
+              <i></i><i></i><i></i><i></i>
+            </div>
           </div>
         </div>
       </section>
@@ -355,6 +427,7 @@
     <script src="assets/i18n.js"></script>
     <script src="assets/experience.js"></script>
     <script src="assets/hero-motion.js"></script>
+    <script src="assets/authority-narrative.js"></script>
     <script src="assets/orbit.js"></script>
   </body>
 </html>

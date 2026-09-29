@@ -1,13 +1,13 @@
 (() => {
   const hero = document.querySelector(".hero");
-  const art = hero?.querySelector(".pictorial-map");
-  if (!hero || !art) return;
+  if (!hero) return;
+  const art = hero.querySelector(".pictorial-map");
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const finePointer = window.matchMedia("(pointer: fine) and (min-width: 761px)");
   hero.classList.add("hero-motion-ready");
-  const layers = [...art.querySelectorAll(".visual-layer")];
-  const signalMotion = art.querySelector(".thread-signal animateMotion");
+  const layers = art ? [...art.querySelectorAll(".visual-layer")] : [];
+  const signalMotion = art?.querySelector(".thread-signal animateMotion");
   let entered = false;
   let frame = 0;
   let bounds = null;
@@ -21,8 +21,8 @@
     if (entered) return;
     entered = true;
     hero.classList.add("hero-initialized");
-    window.setTimeout(() => signalMotion?.beginElement(), 1280);
-    window.setTimeout(() => hero.classList.add("hero-online"), 2200);
+    window.setTimeout(() => signalMotion?.beginElement(), 720);
+    window.setTimeout(() => hero.classList.add("hero-online"), 2450);
   };
 
   if (reducedMotion.matches) {
@@ -45,7 +45,7 @@
     art.style.setProperty("--parallax-x", `${(currentX * 2).toFixed(2)}px`);
     art.style.setProperty("--parallax-y", `${(currentY * 2).toFixed(2)}px`);
     layers.forEach((layer, index) => {
-      const depth = 3 + index * 1.25;
+      const depth = 2.5 + index;
       layer.style.setProperty("--layer-x", `${(currentX * depth).toFixed(2)}px`);
       layer.style.setProperty("--layer-y", `${(currentY * depth * 0.7).toFixed(2)}px`);
     });
@@ -80,7 +80,9 @@
     requestRender();
   };
 
-  art.addEventListener("pointerenter", onPointerEnter, { passive: true });
-  art.addEventListener("pointermove", onPointerMove, { passive: true });
-  art.addEventListener("pointerleave", onPointerLeave, { passive: true });
+  if (art) {
+    art.addEventListener("pointerenter", onPointerEnter, { passive: true });
+    art.addEventListener("pointermove", onPointerMove, { passive: true });
+    art.addEventListener("pointerleave", onPointerLeave, { passive: true });
+  }
 })();

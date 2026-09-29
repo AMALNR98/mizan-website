@@ -27,6 +27,8 @@ const arabicPairs = [
   ["AI system", "نظام الذكاء الاصطناعي"],
   ["Operation", "التشغيل"],
   ["Authority", "الصلاحية"],
+  ["Authority layer", "طبقة الصلاحية"],
+  ["Resolution", "الحصيلة"],
   ["Authority record", "سجل الصلاحية"],
   ["Authority recorded", "تم توثيق الصلاحية"],
   ["Scroll transition", "مسار الصلاحية"],
