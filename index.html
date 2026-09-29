@@ -9,10 +9,11 @@
     <meta property="og:title" content="MIZAN | Institutional Authority Assurance for AI">
     <meta property="og:description" content="The record of who authorised the machine.">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="assets/experience.css?v=authority-title-2">
+    <link rel="stylesheet" href="assets/experience.css">
+    <link rel="stylesheet" href="assets/home-redesign.css?v=2">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   </head>
-  <body>
+  <body class="home-publication">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-shell">
@@ -52,20 +53,40 @@
     </header>
 
     <main id="main">
-      <section class="hero hero-intro" aria-labelledby="hero-title">
+      <section class="hero hero-intro publication-hero" aria-labelledby="hero-title">
         <div class="container hero-grid">
-          <div class="hero-copy reveal">
+          <div class="hero-copy">
             <div class="eyebrow hero-eyebrow">Institutional authority assurance</div>
-            <h1 id="hero-title"><span class="mizan-word">MIZAN</span> <span class="arabic" lang="ar" dir="rtl">ميزان</span></h1>
-            <div class="headline hero-headline"><span>The record of who</span><span><em>authorised</em> the</span><span>machine.</span></div>
+            <h1 id="hero-title" class="hero-headline">
+              <span>The record of who</span>
+              <span><em>authorised</em> the</span>
+              <span>machine.</span>
+            </h1>
             <p class="support">Institutional authority assurance for public-sector AI agents - maintaining the evidence, authority, accountability and expiry behind permission to operate.</p>
             <div class="hero-actions" aria-label="Hero actions">
-              <a class="button primary hero-cta" href="#platform"><span>Explore MIZAN</span><i aria-hidden="true">→</i></a>
-              <a class="button secondary hero-cta" href="contact/"><span>Request a Conversation</span><i aria-hidden="true">→</i></a>
+              <a class="button primary hero-cta" href="#authority-story"><span>Explore MIZAN</span><i aria-hidden="true">&rarr;</i></a>
+              <a class="button secondary hero-cta" href="contact/"><span>Request a Conversation</span><i aria-hidden="true">&rarr;</i></a>
             </div>
           </div>
-
+          <div class="hero-authority-object" aria-hidden="true">
+            <svg class="hero-authority-geometry" viewBox="0 0 680 680">
+              <circle class="hero-construction-ring ring-outer" cx="340" cy="340" r="250"/>
+              <circle class="hero-construction-ring ring-inner" cx="340" cy="340" r="164"/>
+              <path class="hero-construction-line" d="M340 36 V644 M36 340 H644 M125 125 L555 555 M555 125 L125 555"/>
+              <path class="hero-authority-line" pathLength="1" d="M160 532 C214 470 196 383 278 344 C346 311 355 230 418 179 C454 150 486 129 526 118"/>
+              <circle class="hero-signal" cx="526" cy="118" r="6"/>
+              <path class="hero-register-mark" d="M94 146 H154 M124 116 V176 M526 504 H586 M556 474 V534"/>
+            </svg>
+            <div class="hero-record-seal">
+              <span class="seal-mark">M</span>
+              <strong>MIZAN</strong>
+              <small>Authority record</small>
+              <i></i>
+            </div>
+            <div class="hero-object-caption"><span>Mandate</span><span>Owner</span><span>Evidence</span><span>Expiry</span></div>
+          </div>
         </div>
+        <div class="hero-folio" aria-hidden="true"><span>01</span><i></i><span>Authority begins with a record</span></div>
       </section>
 
       <section class="authority-narrative" id="authority-story" aria-label="The institutional chain of authority">
@@ -195,54 +216,50 @@
         </div>
       </section>
 
-      <section class="section compact scroll-story" aria-labelledby="scroll-title">
+      <section class="publication-chapter transfer-chapter" id="transfer" aria-labelledby="transfer-title">
         <div class="container">
-          <div class="section-kicker">Scroll transition</div>
-          <h2 id="scroll-title" class="section-heading medium">From machine telemetry to an institutional record.</h2>
-          <div class="story-rail reveal">
-            <div class="story-step">
-              <b>Machine</b>
-              <span>Runtime signals are observed.</span>
+          <header class="chapter-header chapter-header-split">
+            <div>
+              <div class="chapter-index"><span>03</span><i></i><span>Machine to institution</span></div>
+              <h2 id="transfer-title">From runtime signal to institutional record.</h2>
             </div>
-            <div class="story-step">
-              <b>People</b>
-              <span>Responsibility remains named.</span>
-            </div>
-            <div class="story-step">
-              <b>Institution</b>
-              <span>Mandate and conditions hold the case.</span>
-            </div>
-            <div class="story-step">
-              <b>Record</b>
-              <span>Authorisation can be reconstructed.</span>
-            </div>
-          </div>
+            <p>Operational observation becomes accountable authority only when responsibility, mandate and evidence remain connected.</p>
+          </header>
+          <ol class="transfer-line editorial-reveal" aria-label="Machine to institution sequence">
+            <li><span>01</span><strong>Runtime</strong><small>Observed</small></li>
+            <li><span>02</span><strong>Responsibility</strong><small>Named</small></li>
+            <li><span>03</span><strong>Mandate</strong><small>Held</small></li>
+            <li><span>04</span><strong>Record</strong><small>Reconstructable</small></li>
+          </ol>
         </div>
       </section>
 
-      <section class="section" id="problem" aria-labelledby="problem-title">
+      <section class="publication-chapter problem-editorial" id="problem" aria-labelledby="problem-title">
         <div class="container">
-          <div class="section-kicker">The problem</div>
-          <h2 id="problem-title" class="section-heading">Enterprises can deploy AI. They must still reconstruct authority.</h2>
-          <p class="section-lede">MIZAN establishes a continuous control record across approval, operation, change and review, giving enterprise stakeholders a shared view of permission and accountability.</p>
-          <div class="failure-grid reveal">
-            <article class="failure-card">
-              <span class="tag">01</span>
+          <div class="chapter-index dark-index"><span>04</span><i></i><span>The problem</span></div>
+          <div class="problem-statement">
+            <h2 id="problem-title">Enterprises can deploy AI.</h2>
+            <p>They must still<br>reconstruct authority.</p>
+          </div>
+          <p class="problem-intro">MIZAN establishes a continuous control record across approval, operation, change and review, giving enterprise stakeholders a shared view of permission and accountability.</p>
+          <div class="problem-ledger editorial-reveal">
+            <article>
+              <span>01</span>
               <h3>Pre-award</h3>
               <p>The mission never becomes a testable requirement before selection.</p>
             </article>
-            <article class="failure-card">
-              <span class="tag">02</span>
+            <article>
+              <span>02</span>
               <h3>Approval</h3>
               <p>Approval may be recorded without a reconstructable argument.</p>
             </article>
-            <article class="failure-card">
-              <span class="tag">03</span>
+            <article>
+              <span>03</span>
               <h3>In-life</h3>
               <p>Changes to evidence, models or operating conditions may invalidate the basis of acceptance.</p>
             </article>
-            <article class="failure-card">
-              <span class="tag">04</span>
+            <article>
+              <span>04</span>
               <h3>Institutional outcome</h3>
               <p>Leadership needs a clear record of accountability, control effectiveness and decision outcomes.</p>
             </article>
@@ -250,160 +267,167 @@
         </div>
       </section>
 
-      <section class="section" id="ecosystem" aria-labelledby="ecosystem-title">
+      <section class="publication-chapter ecosystem-chapter" id="ecosystem" aria-labelledby="ecosystem-title">
         <div class="container">
-          <div class="section-kicker">Enterprise product suite</div>
-          <h2 id="ecosystem-title" class="section-heading">One connected system for institutional AI assurance.</h2>
-          <p class="section-lede">MIZAN connects authority with institutional capability, qualified people, trusted knowledge and controlled research across the enterprise.</p>
-          <div class="ecosystem-orbit reveal">
-            <div class="orbit-ring"></div>
-            <div class="orbit-ring second"></div>
-            <div class="orbit-center"><strong>MIZAN</strong><span>Governs authority - the central institutional assurance platform.</span></div>
-            <a href="qudra/" class="orbit-node is-active" data-node="qudra"><strong>Qudra</strong><span>Builds capability</span></a>
-            <a href="mutamad/" class="orbit-node" data-node="mutamad"><strong>Mu'tamad</strong><span>Certifies people</span></a>
-            <a href="isnad/" class="orbit-node" data-node="isnad"><strong>Isnad</strong><span>Attests knowledge</span></a>
-            <a href="misbar/" class="orbit-node" data-node="misbar"><strong>Misbar</strong><span>Controlled research</span></a>
-          </div>
-          <div class="orbit-detail" data-orbit-detail>Qudra builds institutional capability: mandate, readiness and ownership. It can stand alone and also supplies reusable capability context into MIZAN.</div>
-        </div>
-      </section>
-
-      <section class="section" id="platform" aria-labelledby="platform-title">
-        <div class="container">
-          <div class="section-kicker">Where MIZAN sits</div>
-          <h2 id="platform-title" class="section-heading">The layer between law and runtime control.</h2>
-          <p class="section-lede">Agent-control systems watch behaviour in operation. MIZAN maintains the institutional permission around the use case.</p>
-          <div class="architecture-panel reveal">
-            <div class="layer-stack" aria-label="Four layer model">
-              <div class="stack-line" aria-hidden="true"></div>
-              <button class="arch-layer" type="button" data-layer="mandate">
-                <span>01 - Mandate &amp; Law <small>Statute, standards, delegated instruments, public purpose.</small></span>
-              </button>
-              <button class="arch-layer is-active" type="button" data-layer="mizan">
-                <span>02 - Institutional Authorisation - MIZAN <small>Authority Envelope, named holder, expiry, capability gate.</small></span>
-              </button>
-              <button class="arch-layer" type="button" data-layer="control">
-                <span>03 - Agent Control <small>Registry, identity, approval routing, observability.</small></span>
-              </button>
-              <button class="arch-layer" type="button" data-layer="substrate">
-                <span>04 - Substrate <small>APIs, models, tools, logs, case-management systems.</small></span>
-              </button>
-            </div>
-            <div>
-              <div class="layer-copy">
-                <h3 data-layer-title>Institutional authorisation</h3>
-                <p data-layer-body>MIZAN holds the authority envelope: mandate instrument, named holder, conditions, expiry and capability gate.</p>
-              </div>
-              <div class="distinction">Runtime governance watches the system.<br>MIZAN watches the permission.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="record" aria-labelledby="record-title">
-        <div class="container">
-          <div class="section-kicker">The authorisation record</div>
-          <h2 id="record-title" class="section-heading">An assurance case, not a checklist.</h2>
-          <p class="section-lede">A MIZAN record links public purpose, mandate, use case, evidence, capability, conditions, acceptance, expiry and change events into a named institutional case.</p>
-          <div class="record-graph reveal">
-            <svg class="graph-lines" viewBox="0 0 1100 620" aria-hidden="true">
-              <g fill="none" stroke="#c9a24b" stroke-width="1.4" opacity="0.7">
-                <path d="M550 310 C360 210 260 145 150 124"/>
-                <path d="M550 310 C504 162 497 110 515 82"/>
-                <path d="M550 310 C710 190 818 136 948 134"/>
-                <path d="M550 310 C354 306 184 286 105 284"/>
-                <path d="M550 310 C752 309 890 286 997 285"/>
-                <path d="M550 310 C362 443 242 506 168 522"/>
-                <path d="M550 310 C532 442 532 514 550 558"/>
-                <path d="M550 310 C738 442 850 502 926 521"/>
-              </g>
+          <header class="chapter-header ecosystem-heading">
+            <div class="chapter-index"><span>05</span><i></i><span>Product ecosystem</span></div>
+            <h2 id="ecosystem-title">One institutional system.<br>Five connected functions.</h2>
+            <p>MIZAN connects authority with institutional capability, qualified people, trusted knowledge and controlled research across the enterprise.</p>
+          </header>
+          <div class="product-constellation editorial-reveal" data-product-constellation>
+            <svg viewBox="0 0 1200 680" preserveAspectRatio="none" aria-hidden="true">
+              <path data-product-line="qudra" d="M600 315 C476 252 363 208 236 160"/>
+              <path data-product-line="mutamad" d="M600 315 C714 248 830 205 970 158"/>
+              <path data-product-line="isnad" d="M600 315 C742 367 841 430 981 516"/>
+              <path data-product-line="misbar" d="M600 315 C474 375 361 433 220 522"/>
             </svg>
-            <div class="graph-node core"><strong>Authority Envelope</strong><span>Named permission, conditions and expiry around one AI use case.</span></div>
-            <div class="graph-node"><strong>Public Purpose</strong><span>What outcome justifies the use case.</span></div>
-            <div class="graph-node"><strong>Mandate</strong><span>The instrument that permits action.</span></div>
-            <div class="graph-node"><strong>AI Use Case</strong><span>The bounded machine-mediated function.</span></div>
-            <div class="graph-node"><strong>Named Owner</strong><span>The visible person responsible for acceptance.</span></div>
-            <div class="graph-node"><strong>Evidence</strong><span>Material claims trace to named artefacts.</span></div>
-            <div class="graph-node"><strong>Capability</strong><span>Live, expiring institutional condition.</span></div>
-            <div class="graph-node"><strong>Conditions</strong><span>Blocking issues remain visible.</span></div>
-            <div class="graph-node"><strong>Expiry</strong><span>Review, re-authorise, condition or withdraw.</span></div>
+            <a class="product-node product-node-core" href="platform/" data-product="mizan">
+              <span>M</span><strong>MIZAN</strong><small>Governs authority</small>
+            </a>
+            <a class="product-node product-node-qudra" href="qudra/" data-product="qudra">
+              <span>01</span><strong>Qudra</strong><small>Builds capability</small>
+            </a>
+            <a class="product-node product-node-mutamad" href="mutamad/" data-product="mutamad">
+              <span>02</span><strong>Mu'tamad</strong><small>Certifies people</small>
+            </a>
+            <a class="product-node product-node-isnad" href="isnad/" data-product="isnad">
+              <span>03</span><strong>Isnad</strong><small>Attests knowledge</small>
+            </a>
+            <a class="product-node product-node-misbar" href="misbar/" data-product="misbar">
+              <span>04</span><strong>Misbar</strong><small>Controlled research</small>
+            </a>
+            <p class="product-constellation-note" data-product-description aria-live="polite">MIZAN governs authority as the central institutional assurance platform.</p>
           </div>
         </div>
       </section>
 
-      <section class="section" id="expiry" aria-labelledby="expiry-title">
+      <section class="publication-chapter architecture-chapter" id="platform" aria-labelledby="platform-title">
         <div class="container">
-          <div class="section-kicker">Permission that expires</div>
-          <h2 id="expiry-title" class="section-heading">Permission that expires - not a policy that sits on a shelf.</h2>
-          <p class="section-lede">Capability is live. Evidence ages. Material change can trigger review. A blocking issue must not disappear inside an average.</p>
-          <div class="lifecycle reveal">
-            <div class="life-steps" aria-label="Authorisation lifecycle">
-              <button class="life-step is-active" type="button" data-life="authorised"><span class="dot">01</span><span>Authorised</span></button>
-              <button class="life-step" type="button" data-life="evidence"><span class="dot">02</span><span>Evidence ages</span></button>
-              <button class="life-step" type="button" data-life="change"><span class="dot">03</span><span>System changes</span></button>
-              <button class="life-step" type="button" data-life="condition"><span class="dot">04</span><span>Condition triggered</span></button>
-              <button class="life-step" type="button" data-life="review"><span class="dot">05</span><span>Review required</span></button>
-              <button class="life-step" type="button" data-life="decision"><span class="dot">06</span><span>Re-authorise / condition / withdraw</span></button>
+          <header class="chapter-header chapter-header-split">
+            <div>
+              <div class="chapter-index"><span>06</span><i></i><span>Where MIZAN sits</span></div>
+              <h2 id="platform-title">The layer between law and runtime control.</h2>
             </div>
-            <div class="life-stage">
-              <h3 data-life-title>Authorised</h3>
-              <p data-life-body>A named decision holder accepts a bounded AI use case against a mandate, evidence set, conditions and review date.</p>
-              <div class="life-meta" data-life-meta>
-                <div><b>01</b><span>Authority envelope issued</span></div>
-                <div><b>02</b><span>Named holder visible</span></div>
-                <div><b>03</b><span>Expiry date set</span></div>
+            <p>Agent-control systems watch behaviour in operation. MIZAN maintains the institutional permission around the use case.</p>
+          </header>
+          <div class="institution-cross-section editorial-reveal" aria-label="Four layer institutional architecture">
+            <article class="institution-layer">
+              <span>01</span>
+              <div><strong>Mandate &amp; law</strong><small>Statute, standards, delegated instruments, public purpose.</small></div>
+              <em>Institutional basis</em>
+            </article>
+            <article class="institution-layer mizan-layer">
+              <span>02</span>
+              <div>
+                <small>Institutional authorisation</small>
+                <strong>MIZAN</strong>
+                <p>Authority envelope&nbsp;&nbsp; / &nbsp;&nbsp;Named holder&nbsp;&nbsp; / &nbsp;&nbsp;Expiry&nbsp;&nbsp; / &nbsp;&nbsp;Capability gate</p>
               </div>
-            </div>
+              <em>Permission</em>
+            </article>
+            <article class="institution-layer">
+              <span>03</span>
+              <div><strong>Agent control</strong><small>Registry, identity, approval routing, observability.</small></div>
+              <em>Runtime governance</em>
+            </article>
+            <article class="institution-layer">
+              <span>04</span>
+              <div><strong>Substrate</strong><small>APIs, models, tools, logs, case-management systems.</small></div>
+              <em>Technical operation</em>
+            </article>
           </div>
+          <p class="architecture-distinction">Runtime governance watches the system. <strong>MIZAN watches the permission.</strong></p>
         </div>
       </section>
 
-      <section class="section" id="evidence" aria-labelledby="evidence-title">
+      <section class="publication-chapter assurance-chapter" id="record" aria-labelledby="record-title">
         <div class="container">
-          <div class="section-kicker">From claim to evidence</div>
-          <h2 id="evidence-title" class="section-heading">Every material claim traces to named evidence.</h2>
-          <p class="section-lede">MIZAN connects every material claim to its evidence source, accountable owner, specialist review and validity period.</p>
-          <div class="evidence-system reveal">
-            <div class="evidence-flow" aria-label="Evidence provenance flow">
-              <button class="evidence-node is-active" type="button" data-evidence="claim"><b>Claim</b><span>The institutional statement that must be supported.</span></button>
-              <button class="evidence-node" type="button" data-evidence="evidence"><b>Evidence</b><span>Artefact, owner, date and validity period.</span></button>
-              <button class="evidence-node" type="button" data-evidence="review"><b>Specialist review</b><span>Named reviewer and condition.</span></button>
-              <button class="evidence-node" type="button" data-evidence="authority"><b>Authority</b><span>Mandate and accountable holder.</span></button>
-              <button class="evidence-node" type="button" data-evidence="decision"><b>Decision</b><span>Accepted, conditional, withdrawn or blocked.</span></button>
-              <button class="evidence-node" type="button" data-evidence="expiry"><b>Expiry / reassessment</b><span>Timer and review trigger.</span></button>
+          <header class="chapter-header assurance-heading">
+            <div class="chapter-index"><span>07</span><i></i><span>The authorisation record</span></div>
+            <h2 id="record-title">An assurance case,<br>not a checklist.</h2>
+            <p>A MIZAN record links public purpose, mandate, use case, evidence, capability, conditions, acceptance and expiry into one named institutional case.</p>
+          </header>
+          <div class="assurance-graph editorial-reveal" data-assurance-graph>
+            <svg viewBox="0 0 1000 760" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M500 380 V92 M500 380 L196 204 M500 380 L804 204 M500 380 H135 M500 380 H865 M500 380 L196 584 M500 380 L500 680 M500 380 L804 584"/>
+            </svg>
+            <button class="assurance-node node-purpose" type="button" data-assurance="purpose"><span>01</span><strong>Public purpose</strong></button>
+            <button class="assurance-node node-mandate" type="button" data-assurance="mandate"><span>02</span><strong>Mandate</strong></button>
+            <button class="assurance-node node-owner" type="button" data-assurance="owner"><span>03</span><strong>Named owner</strong></button>
+            <button class="assurance-node node-evidence" type="button" data-assurance="evidence"><span>04</span><strong>Evidence</strong></button>
+            <button class="assurance-node node-capability" type="button" data-assurance="capability"><span>05</span><strong>Capability</strong></button>
+            <button class="assurance-node node-use-case" type="button" data-assurance="usecase"><span>06</span><strong>AI use case</strong></button>
+            <button class="assurance-node node-conditions" type="button" data-assurance="conditions"><span>07</span><strong>Conditions</strong></button>
+            <button class="assurance-node node-expiry" type="button" data-assurance="expiry"><span>08</span><strong>Expiry</strong></button>
+            <div class="assurance-core">
+              <span>M</span>
+              <strong>MIZAN</strong>
+              <small>Authority record</small>
             </div>
-            <aside class="metadata-panel" aria-live="polite">
-              <div class="eyebrow">Evidence control</div>
-              <h3 data-evidence-title>Claim</h3>
-              <div class="metadata-grid" data-evidence-rows>
-                <div><b>Claim</b><span>Defined institutional requirement</span></div>
-                <div><b>Evidence source</b><span>Governed evidence repository</span></div>
-                <div><b>Evidence owner</b><span>Assigned control owner</span></div>
-                <div><b>Collected date</b><span>Version controlled</span></div>
-                <div><b>Validity period</b><span>Policy defined</span></div>
-                <div><b>Reviewer</b><span>Authorised reviewer</span></div>
-                <div><b>Condition</b><span>Recorded control condition</span></div>
-                <div><b>Last change</b><span>Change history retained</span></div>
-                <div><b>Current state</b><span>Open</span></div>
-              </div>
-            </aside>
+          </div>
+          <div class="assurance-note" data-assurance-note aria-live="polite">
+            <span>Authority envelope</span>
+            <p>Named permission, conditions and expiry around one AI use case.</p>
           </div>
         </div>
       </section>
 
-      <section class="cta-band" aria-labelledby="cta-title">
-        <div class="container cta-box">
-          <div>
-            <div class="section-kicker">Build the record</div>
-            <h2 id="cta-title">MIZAN makes computationally mediated authority visible, testable, reconstructable and accountable.</h2>
-            <p>Build the record behind the decision.</p>
+      <section class="publication-chapter expiry-chapter" id="expiry" aria-labelledby="expiry-title">
+        <div class="container">
+          <header class="chapter-header chapter-header-split">
+            <div>
+              <div class="chapter-index"><span>08</span><i></i><span>Permission that expires</span></div>
+              <h2 id="expiry-title">Permission is maintained,<br>not merely granted.</h2>
+            </div>
+            <p>Capability is live. Evidence ages. Material change can trigger review. A blocking issue must not disappear inside an average.</p>
+          </header>
+          <ol class="permission-timeline editorial-reveal" data-permission-timeline>
+            <li class="is-active"><button type="button" data-timeline-step="0"><span>01</span><strong>Authorised</strong></button></li>
+            <li><button type="button" data-timeline-step="1"><span>02</span><strong>Evidence ages</strong></button></li>
+            <li><button type="button" data-timeline-step="2"><span>03</span><strong>System changes</strong></button></li>
+            <li><button type="button" data-timeline-step="3"><span>04</span><strong>Condition triggered</strong></button></li>
+            <li><button type="button" data-timeline-step="4"><span>05</span><strong>Review required</strong></button></li>
+          </ol>
+          <div class="permission-detail" data-permission-detail aria-live="polite">
+            <span>Current authority state</span>
+            <p>A named decision holder accepts a bounded AI use case against a mandate, evidence set, conditions and review date.</p>
           </div>
-          <div class="hero-actions">
-            <a class="button primary" href="contact/">Request a Conversation</a>
-            <a class="button secondary" href="platform/">Explore the Platform</a>
+          <div class="permission-outcomes" aria-label="Review outcomes">
+            <span>Review</span><i></i>
+            <strong>Re-authorise</strong>
+            <strong>Condition</strong>
+            <strong>Withdraw</strong>
           </div>
         </div>
       </section>
+
+      <section class="publication-chapter provenance-chapter" id="evidence" aria-labelledby="evidence-title">
+        <div class="container provenance-layout">
+          <header class="chapter-header">
+            <div class="chapter-index"><span>09</span><i></i><span>Evidence / provenance</span></div>
+            <h2 id="evidence-title">Every material claim traces to named evidence.</h2>
+            <p>MIZAN connects every material claim to its evidence source, accountable owner, specialist review and validity period.</p>
+          </header>
+          <ol class="provenance-chain editorial-reveal">
+            <li><span>01</span><div><strong>Claim</strong><small>The institutional statement that must be supported.</small></div></li>
+            <li class="evidence-emphasis"><span>02</span><div><strong>Evidence</strong><small>Owner / Collected date / Validity period</small></div></li>
+            <li><span>03</span><div><strong>Specialist review</strong><small>Named reviewer and condition.</small></div></li>
+            <li><span>04</span><div><strong>Authority</strong><small>Mandate and accountable holder.</small></div></li>
+            <li><span>05</span><div><strong>Decision</strong><small>Accepted, conditional, withdrawn or blocked.</small></div></li>
+            <li><span>06</span><div><strong>Expiry</strong><small>Timer and reassessment trigger.</small></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="publication-final" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="chapter-index"><span>10</span><i></i><span>Build the record</span></div>
+          <h2 id="cta-title">Make authority<br>visible, testable<br>and reconstructable.</h2>
+          <a class="button primary final-cta" href="contact/"><span>Request a Conversation</span><i aria-hidden="true">&rarr;</i></a>
+          <div class="final-signature" aria-hidden="true"><span>M</span><strong>MIZAN</strong></div>
+        </div>
+      </section>
+
     </main>
 
 
@@ -428,6 +452,6 @@
     <script src="assets/experience.js"></script>
     <script src="assets/hero-motion.js"></script>
     <script src="assets/authority-narrative.js"></script>
-    <script src="assets/orbit.js"></script>
+    <script src="assets/home-redesign.js"></script>
   </body>
 </html>
