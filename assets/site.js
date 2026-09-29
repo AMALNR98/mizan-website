@@ -61,23 +61,6 @@ document.querySelectorAll(".primary-nav a").forEach((link) => {
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (!reduceMotion) {
-  const heroArt = document.querySelector(".hero-art");
-  if (heroArt) {
-    heroArt.addEventListener("pointermove", (event) => {
-      const rect = heroArt.getBoundingClientRect();
-      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 26;
-      const y = ((event.clientY - rect.top) / rect.height - 0.5) * 26;
-      heroArt.style.setProperty("--mx", `${x}px`);
-      heroArt.style.setProperty("--my", `${y}px`);
-    });
-    heroArt.addEventListener("pointerleave", () => {
-      heroArt.style.setProperty("--mx", "0px");
-      heroArt.style.setProperty("--my", "0px");
-    });
-  }
-}
-
 const revealObserver = "IntersectionObserver" in window
   ? new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -307,63 +290,4 @@ if (contactForm) {
     }
     contactForm.reset();
   });
-}
-
-
-// Cinematic hero response
-if (!reduceMotion) {
-  const cinematicHero = document.querySelector(".hero");
-  const cinematicArt = document.querySelector(".pictorial-map");
-  const cinematicCopy = document.querySelector(".hero-copy");
-  const depthLayers = cinematicArt?.querySelectorAll(".visual-layer") || [];
-
-  if (cinematicHero && cinematicArt) {
-    cinematicArt.addEventListener("pointermove", (event) => {
-      const rect = cinematicArt.getBoundingClientRect();
-      const nx = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
-      const ny = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
-      cinematicHero.style.setProperty("--hero-light-x", (58 + nx * 7) + "%");
-      cinematicHero.style.setProperty("--hero-light-y", (43 + ny * 5) + "%");
-
-      const depth = [4, 7, 10];
-      depthLayers.forEach((layer, index) => {
-        const amount = depth[index] || 5;
-        layer.style.setProperty("--layer-x", (nx * amount).toFixed(2) + "px");
-        layer.style.setProperty("--layer-y", (ny * amount * 0.65).toFixed(2) + "px");
-        layer.style.setProperty("--layer-r", (nx * (index + 1) * 0.22).toFixed(2) + "deg");
-      });
-    });
-
-    cinematicArt.addEventListener("pointerleave", () => {
-      cinematicHero.style.setProperty("--hero-light-x", "58%");
-      cinematicHero.style.setProperty("--hero-light-y", "43%");
-      depthLayers.forEach((layer) => {
-        layer.style.setProperty("--layer-x", "0px");
-        layer.style.setProperty("--layer-y", "0px");
-        layer.style.setProperty("--layer-r", "0deg");
-      });
-    });
-
-    let heroFrame = 0;
-    window.addEventListener("scroll", () => {
-      if (heroFrame) return;
-      heroFrame = requestAnimationFrame(() => {
-        heroFrame = 0;
-        const progress = Math.min(window.scrollY / Math.max(cinematicHero.offsetHeight * 0.75, 1), 1);
-        if (progress < 0.01) {
-          cinematicCopy?.style.removeProperty("transform");
-          cinematicCopy?.style.removeProperty("opacity");
-          cinematicArt.style.removeProperty("transform");
-          cinematicArt.style.removeProperty("opacity");
-          return;
-        }
-        if (cinematicCopy) {
-          cinematicCopy.style.transform = "translateY(" + (-progress * 42).toFixed(1) + "px)";
-          cinematicCopy.style.opacity = String(1 - progress * 0.72);
-        }
-        cinematicArt.style.transform = "translateY(" + (-progress * 18).toFixed(1) + "px)";
-        cinematicArt.style.opacity = String(1 - progress * 0.34);
-      });
-    }, { passive: true });
-  }
 }
