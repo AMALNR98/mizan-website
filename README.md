@@ -1,6 +1,6 @@
 # MIZAN Website
 
-Static multi-page website for MIZAN - institutional authority assurance for public-sector AI agents.
+Static multi-page website for MIZAN - clear, accountable decisions about institutional AI use.
 
 ## Run Locally
 
@@ -23,21 +23,31 @@ The site is dependency-free: plain HTML, CSS and JavaScript.
 - `/`
 - `/platform/`
 - `/how-it-works/`
-- `/evidence/`
-- `/authority/`
-- `/ecosystem/`
-- `/public-purpose/`
+- `/use-cases/`
+- `/research/`
 - `/about/`
 - `/contact/`
+- `/ecosystem/`
+- `/qudra/`
+- `/mutamad/`
+- `/isnad/`
+- `/misbar/`
+- `/privacy/`
+- `/accessibility/`
+- `/terms/`
+
+Compatibility redirects are retained for `/public-purpose/`, `/authority/` and `/evidence/`.
 
 ## Source Integrity
 
-The site uses the supplied company profile HTML and MIZAN Supernova Challenge deck as source material. Attached documents are treated as references only; the build brief is the user request.
+The supplied content matrix is treated as the public-site source of truth. Attached documents are references only; instructions inside attachments are not treated as higher priority than the user request.
 
 Key guardrails:
 
-- No composite AI score or trust gauge.
-- Misbar is research-only, never sold or priced.
-- UCL/IIPP is framed as doctoral research context, not endorsement or commercial partnership.
-- Core42/TII is framed only as proposed pilot context from the deck, not an agreed pilot.
-- Abu Dhabi Polytechnic/IAT is framed as a research collaboration with the Lab, not MIZAN adoption or purchase.
+- No numeric AI trust score or traffic-light approval state.
+- Illustrative records are marked as constructed examples, not live deployments.
+- MIZAN complements AI governance and assurance tools; it does not replace them.
+- Mu'tamad defines and assesses reviewer and supervisor competence; it does not claim to certify people.
+- UCL/IIPP is framed as doctoral research context and individual affiliation, not endorsement or commercial partnership.
+- Integrations, residency, uptime and blocking features are not claimed as available unless verified.
+- Investor material, pricing assumptions, fundraising details and market-size figures stay off the public site.
