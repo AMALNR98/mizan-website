@@ -49,17 +49,6 @@ body.is-arabic {
   font-size: 18px;
 }
 
-body.is-arabic main::before {
-  content: "Arabic localization is in progress. Approved Arabic copy is shown where available; detailed public-language review remains open.";
-  display: block;
-  margin-top: var(--header);
-  border-bottom: 1px solid var(--gold-line);
-  background: rgba(201, 162, 75, 0.12);
-  color: var(--ivory);
-  padding: 12px max(24px, calc((100vw - var(--container)) / 2));
-  font-size: 0.86rem;
-}
-
 main { overflow: clip; }
 
 img,
@@ -1224,3 +1213,4 @@ button { color: inherit; }
 @media (max-width: 620px) {
   .option-grid { grid-template-columns: 1fr; }
 }
+
