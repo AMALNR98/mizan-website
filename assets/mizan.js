@@ -1504,6 +1504,13 @@ arabicExtraPairs.forEach(([key, value]) => translations.set(key, value));
   ['If you contact MIZAN, the information you provide may be reviewed by the Arrownex team so they can respond. Formal pilot or customer terms should be agreed separately before confidential information is shared.', 'إذا تواصلت مع ميزان، فقد يراجع فريق أروِنكس المعلومات التي تقدمها حتى يتمكن من الرد. يجب الاتفاق بشكل منفصل على شروط التجربة الرسمية أو شروط العميل قبل مشاركة أي معلومات سرية.']
 ].forEach(([key, value]) => translations.set(key, value));
 
+
+
+[
+  ["Credo AI", "كريدو إيه آي"],
+  ["IBM watsonx.governance", "آي بي إم واتسونكس للحوكمة"]
+].forEach(([key, value]) => translations.set(key, value));
+
 const translatedTitles = new Map([
   ["MIZAN | Clear, Accountable Decisions About AI Use", "ميزان | قرارات واضحة ومسؤولة لاستخدام الذكاء الاصطناعي"],
   ["Platform | MIZAN", "المنصة | ميزان"],
