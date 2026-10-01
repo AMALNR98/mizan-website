@@ -525,7 +525,10 @@ const arabicPairs = [
   ["Timer and reassessment trigger.", "المؤقت ومحفز إعادة التقييم."],
   ["Make authority", "اجعل الصلاحية"],
   ["visible, testable", "ظاهرة وقابلة للاختبار"],
-  ["and reconstructable.", "وإعادة البناء."]
+  ["and reconstructable.", "وإعادة البناء."],
+  ["Authority core", "نواة الصلاحية"],
+  ["Ecosystem", "المنظومة"],
+  ["Assurance", "الضمان"]
 ];
 
 const arabicDictionary = new Map(arabicPairs);

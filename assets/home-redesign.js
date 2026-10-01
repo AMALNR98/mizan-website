@@ -67,20 +67,55 @@
     expiry: ["Expiry", "Permission returns for review, re-authorisation, conditioning or withdrawal."]
   };
 
+  const assuranceCopyAr = {
+    purpose: ["الغاية المؤسسية", "النتيجة التي تبرر حالة الاستخدام وترسخ الغاية المؤسسية."],
+    mandate: ["التفويض", "الأداة القانونية أو التنظيمية أو المفوضة التي تسمح بالعمل المؤسسي."],
+    owner: ["المسؤول المحدد", "الشخص المسؤول عن قبول الصلاحية والحفاظ عليها."],
+    evidence: ["الأدلة", "تظل الادعاءات الجوهرية مرتبطة بأدلة مملوكة ومؤرخة وقابلة للمراجعة."],
+    capability: ["القدرة", "تظل الجاهزية المؤسسية شرطاً مستمراً للصلاحية."],
+    usecase: ["حالة استخدام الذكاء الاصطناعي", "الوظيفة الآلية محددة النطاق التي يغطيها سجل الصلاحية."],
+    conditions: ["الشروط", "تظل الالتزامات والمسائل المانعة ظاهرة طوال التشغيل."],
+    expiry: ["الانتهاء", "تعود الصلاحية للمراجعة أو إعادة التصريح أو التقييد أو السحب."]
+  };
+  const activeAssuranceCopy = document.documentElement.lang === "ar" ? assuranceCopyAr : assuranceCopy;
+
   const assuranceNote = document.querySelector("[data-assurance-note]");
+  const assuranceGraph = document.querySelector("[data-assurance-graph]");
+  const assuranceRecord = assuranceGraph?.querySelector(".assurance-record");
   const assuranceNodes = [...document.querySelectorAll("[data-assurance]")];
 
   const setAssurance = (node) => {
-    const copy = assuranceCopy[node.dataset.assurance];
-    if (!copy || !assuranceNote) return;
-    assuranceNodes.forEach((item) => item.classList.toggle("is-active", item === node));
-    const label = assuranceNote.querySelector("span");
+    const key = node.dataset.assurance;
+    const copy = activeAssuranceCopy[key];
+    if (!copy || !assuranceNote || !assuranceGraph) return;
+    assuranceGraph.dataset.activeAssurance = key;
+    assuranceNodes.forEach((item) => {
+      const active = item === node;
+      item.classList.toggle("is-active", active);
+      item.setAttribute("aria-pressed", String(active));
+    });
+    const index = assuranceNote.querySelector("[data-assurance-index]");
+    const label = assuranceNote.querySelector("[data-assurance-label]");
     const body = assuranceNote.querySelector("p");
+    if (index) index.textContent = node.querySelector("span")?.textContent || "";
     if (label) label.textContent = copy[0];
     if (body) body.textContent = copy[1];
+
+    const signal = assuranceGraph.querySelector(`[data-assurance-signal="${key}"]`);
+    if (!reducedMotion && signal) {
+      signal.classList.remove("is-traveling");
+      void signal.getBoundingClientRect();
+      signal.classList.add("is-traveling");
+    }
+    if (!reducedMotion && assuranceRecord) {
+      assuranceRecord.classList.remove("is-responding");
+      void assuranceRecord.getBoundingClientRect();
+      assuranceRecord.classList.add("is-responding");
+    }
   };
 
   assuranceNodes.forEach((node) => {
+    node.setAttribute("aria-pressed", String(node.classList.contains("is-active")));
     node.addEventListener("pointerenter", () => setAssurance(node));
     node.addEventListener("focus", () => setAssurance(node));
     node.addEventListener("click", () => setAssurance(node));

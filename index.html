@@ -10,7 +10,7 @@
     <meta property="og:description" content="The record of who authorised the machine.">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="assets/experience.css">
-    <link rel="stylesheet" href="assets/home-redesign.css?v=2">
+    <link rel="stylesheet" href="assets/home-redesign.css?v=5">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   </head>
   <body class="home-publication">
@@ -274,30 +274,79 @@
             <h2 id="ecosystem-title">One institutional system.<br>Five connected functions.</h2>
             <p>MIZAN connects authority with institutional capability, qualified people, trusted knowledge and controlled research across the enterprise.</p>
           </header>
-          <div class="product-constellation editorial-reveal" data-product-constellation>
-            <svg viewBox="0 0 1200 680" preserveAspectRatio="none" aria-hidden="true">
-              <path data-product-line="qudra" d="M600 315 C476 252 363 208 236 160"/>
-              <path data-product-line="mutamad" d="M600 315 C714 248 830 205 970 158"/>
-              <path data-product-line="isnad" d="M600 315 C742 367 841 430 981 516"/>
-              <path data-product-line="misbar" d="M600 315 C474 375 361 433 220 522"/>
+
+          <div class="authority-spine-map editorial-reveal" data-product-constellation>
+            <span class="ecosystem-background-word" aria-hidden="true">Ecosystem</span>
+            <span class="ecosystem-construction-circle" aria-hidden="true"></span>
+            <span class="ecosystem-registration registration-a" aria-hidden="true"></span>
+            <span class="ecosystem-registration registration-b" aria-hidden="true"></span>
+
+            <svg class="ecosystem-connection-layer ecosystem-lines-desktop" viewBox="0 0 1200 720" preserveAspectRatio="none" aria-hidden="true">
+              <path class="ecosystem-route" data-product-line="qudra" pathLength="1" d="M570 220 C516 220 498 176 438 176 H322"/>
+              <path class="ecosystem-route" data-product-line="mutamad" pathLength="1" d="M630 310 H748 C788 310 798 266 842 266 H940"/>
+              <path class="ecosystem-route" data-product-line="isnad" pathLength="1" d="M630 438 H748 C786 438 804 500 850 500 H944"/>
+              <path class="ecosystem-route" data-product-line="misbar" pathLength="1" d="M570 520 H478 C438 520 420 472 370 472 H286"/>
+              <path class="ecosystem-signal-route signal-qudra" pathLength="1" d="M322 176 H438 C498 176 516 220 570 220"/>
+              <path class="ecosystem-signal-route signal-mutamad" pathLength="1" d="M940 266 H842 C798 266 788 310 748 310 H630"/>
+              <path class="ecosystem-signal-route signal-isnad" pathLength="1" d="M944 500 H850 C804 500 786 438 748 438 H630"/>
+              <path class="ecosystem-signal-route signal-misbar" pathLength="1" d="M286 472 H370 C420 472 438 520 478 520 H570"/>
             </svg>
-            <a class="product-node product-node-core" href="platform/" data-product="mizan">
-              <span>M</span><strong>MIZAN</strong><small>Governs authority</small>
+
+            <svg class="ecosystem-connection-layer ecosystem-lines-tablet" viewBox="0 0 800 680" preserveAspectRatio="none" aria-hidden="true">
+              <path class="ecosystem-route" data-product-line="qudra" pathLength="1" d="M400 185 V115"/>
+              <path class="ecosystem-route" data-product-line="mutamad" pathLength="1" d="M270 335 H154"/>
+              <path class="ecosystem-route" data-product-line="isnad" pathLength="1" d="M530 400 H646"/>
+              <path class="ecosystem-route" data-product-line="misbar" pathLength="1" d="M400 515 V600"/>
+            </svg>
+
+            <div class="mizan-authority-core" data-product="mizan">
+              <span class="core-register register-top" aria-hidden="true">01</span>
+              <span class="core-register register-bottom" aria-hidden="true">+</span>
+              <i class="authority-core-spine" aria-hidden="true"></i>
+              <i class="authority-core-scan" aria-hidden="true"></i>
+              <span class="core-port port-qudra" aria-hidden="true"></span>
+              <span class="core-port port-mutamad" aria-hidden="true"></span>
+              <span class="core-port port-isnad" aria-hidden="true"></span>
+              <span class="core-port port-misbar" aria-hidden="true"></span>
+              <div class="core-identity">
+                <span class="core-monogram">M</span>
+                <strong>MIZAN</strong>
+                <small>Authority core</small>
+                <p>Governs authority</p>
+              </div>
+              <div class="core-metadata" aria-hidden="true"><span>Mandate</span><span>Evidence</span><span>Expiry</span></div>
+            </div>
+
+            <a class="spine-product spine-product-qudra" href="qudra/" data-product="qudra">
+              <span class="spine-product-index">01</span>
+              <span class="spine-product-copy"><strong>Qudra</strong><small>Builds capability</small></span>
+              <i class="spine-product-rule" aria-hidden="true"></i>
+              <b class="spine-product-node" aria-hidden="true"></b>
             </a>
-            <a class="product-node product-node-qudra" href="qudra/" data-product="qudra">
-              <span>01</span><strong>Qudra</strong><small>Builds capability</small>
+
+            <a class="spine-product spine-product-mutamad" href="mutamad/" data-product="mutamad">
+              <span class="spine-product-index">02</span>
+              <span class="spine-product-copy"><strong>Mu'tamad</strong><small>Certifies people</small></span>
+              <i class="spine-product-rule" aria-hidden="true"></i>
+              <b class="spine-product-node" aria-hidden="true"></b>
             </a>
-            <a class="product-node product-node-mutamad" href="mutamad/" data-product="mutamad">
-              <span>02</span><strong>Mu'tamad</strong><small>Certifies people</small>
+
+            <a class="spine-product spine-product-isnad" href="isnad/" data-product="isnad">
+              <span class="spine-product-index">03</span>
+              <span class="spine-product-copy"><strong>Isnad</strong><small>Attests knowledge</small></span>
+              <i class="spine-product-rule" aria-hidden="true"></i>
+              <b class="spine-product-node" aria-hidden="true"></b>
             </a>
-            <a class="product-node product-node-isnad" href="isnad/" data-product="isnad">
-              <span>03</span><strong>Isnad</strong><small>Attests knowledge</small>
+
+            <a class="spine-product spine-product-misbar" href="misbar/" data-product="misbar">
+              <span class="spine-product-index">04</span>
+              <span class="spine-product-copy"><strong>Misbar</strong><small>Controlled research</small></span>
+              <i class="spine-product-rule" aria-hidden="true"></i>
+              <b class="spine-product-node" aria-hidden="true"></b>
             </a>
-            <a class="product-node product-node-misbar" href="misbar/" data-product="misbar">
-              <span>04</span><strong>Misbar</strong><small>Controlled research</small>
-            </a>
-            <p class="product-constellation-note" data-product-description aria-live="polite">MIZAN governs authority as the central institutional assurance platform.</p>
           </div>
+
+          <p class="authority-spine-note" data-product-description aria-live="polite">MIZAN governs authority as the central institutional assurance platform.</p>
         </div>
       </section>
 
@@ -342,32 +391,67 @@
 
       <section class="publication-chapter assurance-chapter" id="record" aria-labelledby="record-title">
         <div class="container">
-          <header class="chapter-header assurance-heading">
+          <header class="chapter-header assurance-heading assurance-intro editorial-reveal">
             <div class="chapter-index"><span>07</span><i></i><span>The authorisation record</span></div>
             <h2 id="record-title">An assurance case,<br>not a checklist.</h2>
             <p>A MIZAN record links public purpose, mandate, use case, evidence, capability, conditions, acceptance and expiry into one named institutional case.</p>
           </header>
-          <div class="assurance-graph editorial-reveal" data-assurance-graph>
-            <svg viewBox="0 0 1000 760" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M500 380 V92 M500 380 L196 204 M500 380 L804 204 M500 380 H135 M500 380 H865 M500 380 L196 584 M500 380 L500 680 M500 380 L804 584"/>
+          <div class="assurance-constellation editorial-reveal" data-assurance-graph data-active-assurance="usecase">
+            <span class="assurance-background-word" aria-hidden="true">Assurance</span>
+            <span class="assurance-guide guide-a" aria-hidden="true"></span>
+            <span class="assurance-guide guide-b" aria-hidden="true"></span>
+            <span class="assurance-guide guide-c" aria-hidden="true"></span>
+            <span class="assurance-guide guide-d" aria-hidden="true"></span>
+
+            <svg class="assurance-wiring" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
+              <g class="assurance-arcs">
+                <path pathLength="1" d="M421 189 C518 90 709 92 795 205"/>
+                <path pathLength="1" d="M814 251 C885 367 828 508 711 564"/>
+                <path class="arc-gold" pathLength="1" d="M642 585 C526 608 408 540 380 434"/>
+              </g>
+              <g class="assurance-routes">
+                <path data-assurance-line="purpose" pathLength="1" d="M470 245 C400 245 380 95 225 95"/>
+                <path data-assurance-line="mandate" pathLength="1" d="M470 300 C365 300 340 245 160 245"/>
+                <path data-assurance-line="owner" pathLength="1" d="M730 235 C820 235 830 120 980 120"/>
+                <path data-assurance-line="evidence" pathLength="1" d="M470 365 C350 365 300 405 140 405"/>
+                <path data-assurance-line="capability" pathLength="1" d="M730 335 C830 335 890 320 1050 320"/>
+                <path data-assurance-line="usecase" pathLength="1" d="M510 515 C455 550 410 600 260 600"/>
+                <path data-assurance-line="conditions" pathLength="1" d="M650 515 C680 580 740 610 845 610"/>
+                <path data-assurance-line="expiry" pathLength="1" d="M730 455 C820 455 900 535 1050 535"/>
+              </g>
+              <g class="assurance-signals">
+                <path data-assurance-signal="purpose" pathLength="1" d="M225 95 C380 95 400 245 470 245"/>
+                <path data-assurance-signal="mandate" pathLength="1" d="M160 245 C340 245 365 300 470 300"/>
+                <path data-assurance-signal="owner" pathLength="1" d="M980 120 C830 120 820 235 730 235"/>
+                <path data-assurance-signal="evidence" pathLength="1" d="M140 405 C300 405 350 365 470 365"/>
+                <path data-assurance-signal="capability" pathLength="1" d="M1050 320 C890 320 830 335 730 335"/>
+                <path data-assurance-signal="usecase" pathLength="1" d="M260 600 C410 600 455 550 510 515"/>
+                <path data-assurance-signal="conditions" pathLength="1" d="M845 610 C740 610 680 580 650 515"/>
+                <path data-assurance-signal="expiry" pathLength="1" d="M1050 535 C900 535 820 455 730 455"/>
+              </g>
             </svg>
-            <button class="assurance-node node-purpose" type="button" data-assurance="purpose"><span>01</span><strong>Public purpose</strong></button>
-            <button class="assurance-node node-mandate" type="button" data-assurance="mandate"><span>02</span><strong>Mandate</strong></button>
-            <button class="assurance-node node-owner" type="button" data-assurance="owner"><span>03</span><strong>Named owner</strong></button>
-            <button class="assurance-node node-evidence" type="button" data-assurance="evidence"><span>04</span><strong>Evidence</strong></button>
-            <button class="assurance-node node-capability" type="button" data-assurance="capability"><span>05</span><strong>Capability</strong></button>
-            <button class="assurance-node node-use-case" type="button" data-assurance="usecase"><span>06</span><strong>AI use case</strong></button>
-            <button class="assurance-node node-conditions" type="button" data-assurance="conditions"><span>07</span><strong>Conditions</strong></button>
-            <button class="assurance-node node-expiry" type="button" data-assurance="expiry"><span>08</span><strong>Expiry</strong></button>
-            <div class="assurance-core">
-              <span>M</span>
-              <strong>MIZAN</strong>
-              <small>Authority record</small>
+
+            <div class="assurance-record" aria-label="MIZAN authority record">
+              <span class="record-corner corner-a" aria-hidden="true"></span>
+              <span class="record-corner corner-b" aria-hidden="true"></span>
+              <div class="record-identity"><span>M</span><strong>MIZAN</strong><small>Authority record</small></div>
+              <div class="record-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              <div class="record-register" aria-hidden="true"><span>01</span><i></i><span>08</span></div>
+              <span class="record-resolution" aria-hidden="true"></span>
             </div>
+
+            <button class="assurance-node node-purpose" type="button" data-assurance="purpose"><span>01</span><strong>Public purpose</strong><i aria-hidden="true"></i><b aria-hidden="true"></b></button>
+            <button class="assurance-node node-mandate" type="button" data-assurance="mandate"><span>02</span><strong>Mandate</strong><i aria-hidden="true"></i><b aria-hidden="true"></b></button>
+            <button class="assurance-node node-owner" type="button" data-assurance="owner"><span>03</span><strong>Named owner</strong><i aria-hidden="true"></i><b aria-hidden="true"></b></button>
+            <button class="assurance-node node-evidence" type="button" data-assurance="evidence"><span>04</span><strong>Evidence</strong><i aria-hidden="true"></i><b aria-hidden="true"></b></button>
+            <button class="assurance-node node-capability" type="button" data-assurance="capability"><span>05</span><strong>Capability</strong><i aria-hidden="true"></i><b aria-hidden="true"></b></button>
+            <button class="assurance-node node-use-case is-active" type="button" data-assurance="usecase"><span>06</span><strong>AI use case</strong><i aria-hidden="true"></i><b aria-hidden="true"></b></button>
+            <button class="assurance-node node-conditions" type="button" data-assurance="conditions"><span>07</span><strong>Conditions</strong><i aria-hidden="true"></i><b aria-hidden="true"></b></button>
+            <button class="assurance-node node-expiry" type="button" data-assurance="expiry"><span>08</span><strong>Expiry</strong><i aria-hidden="true"></i><b aria-hidden="true"></b></button>
           </div>
           <div class="assurance-note" data-assurance-note aria-live="polite">
-            <span>Authority envelope</span>
-            <p>Named permission, conditions and expiry around one AI use case.</p>
+            <span><b data-assurance-index>06</b> / <em data-assurance-label>AI use case</em></span>
+            <p>The bounded machine-mediated function covered by the authority record.</p>
           </div>
         </div>
       </section>
@@ -448,7 +532,7 @@
       <div class="container footer-meta"><span>Authority. Evidence. Accountability.</span><span>&copy; 2026 MIZAN</span></div>
     </footer>
     <script src="assets/site.js"></script>
-    <script src="assets/i18n.js"></script>
+    <script src="assets/i18n.js?v=3"></script>
     <script src="assets/experience.js"></script>
     <script src="assets/hero-motion.js"></script>
     <script src="assets/authority-narrative.js"></script>
