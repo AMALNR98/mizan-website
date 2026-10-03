@@ -1570,7 +1570,7 @@ if (savedLanguage === "ar") {
 
 const contactForm = document.querySelector(".contact-form");
 if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const requiredFields = Array.from(contactForm.querySelectorAll("[required]"));
     let hasError = false;
@@ -1599,15 +1599,44 @@ if (contactForm) {
       return;
     }
 
-    if (note) {
-      note.textContent = savedLanguage === "ar"
-        ? "شكراً لك. تم تسجيل استفسارك ليتابعه فريق ميزان."
-        : "Thank you. Your enquiry has been recorded for follow-up by the MIZAN team.";
+    const submitButton = contactForm.querySelector("button[type='submit']");
+    const formData = new FormData(contactForm);
+    if (!formData.has("form-name")) formData.set("form-name", contactForm.getAttribute("name") || "mizan-enquiry");
+
+    contactForm.classList.add("is-submitting");
+    if (submitButton) submitButton.disabled = true;
+    if (note) note.textContent = savedLanguage === "ar" ? "جارٍ إرسال الاستفسار..." : "Sending enquiry...";
+
+    try {
+      const response = await fetch(contactForm.getAttribute("action") || "/contact/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+      });
+
+      if (!response.ok) throw new Error(`Form submission failed with status ${response.status}`);
+
+      if (note) {
+        note.textContent = savedLanguage === "ar"
+          ? "شكراً لك. تم تسجيل استفسارك ليتابعه فريق ميزان."
+          : "Thank you. Your enquiry has been recorded for follow-up by the MIZAN team.";
+      }
+      contactForm.reset();
+      requiredFields.forEach((field) => field.setAttribute("aria-invalid", "false"));
+    } catch (error) {
+      console.error(error);
+      if (note) {
+        note.textContent = savedLanguage === "ar"
+          ? "تعذر إرسال الاستفسار. يرجى المحاولة مرة أخرى."
+          : "We could not send your enquiry. Please try again.";
+      }
+    } finally {
+      contactForm.classList.remove("is-submitting");
+      if (submitButton) submitButton.disabled = false;
     }
-    contactForm.reset();
-    requiredFields.forEach((field) => field.setAttribute("aria-invalid", "false"));
   });
 }
+
 
 (function initMizanMotionLayer() {
   const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -1647,5 +1676,104 @@ if (contactForm) {
       card.style.setProperty("--spot-x", `${event.clientX - rect.left}px`);
       card.style.setProperty("--spot-y", `${event.clientY - rect.top}px`);
     });
+  });
+})();
+
+/* MIZAN premium journey system: visual-only content-locked pass */
+(function initMizanPremiumJourney() {
+  const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const homeMain = document.querySelector("body main");
+  const isHome = !!document.querySelector(".home-hero");
+  if (!homeMain || !isHome) return;
+
+  const sections = Array.from(homeMain.querySelectorAll("section"));
+  sections.forEach((section) => {
+    section.classList.add("story-section");
+    if (!section.querySelector(":scope > .section-pulse")) {
+      const pulse = document.createElement("span");
+      pulse.className = "section-pulse";
+      pulse.setAttribute("aria-hidden", "true");
+      section.prepend(pulse);
+    }
+  });
+
+  if (reducedMotion) return;
+
+  let ticking = false;
+  const updateProgress = () => {
+    ticking = false;
+    const vh = window.innerHeight || 1;
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      const progress = Math.min(1, Math.max(0, (vh - rect.top) / (vh + rect.height)));
+      section.style.setProperty("--section-progress", progress.toFixed(3));
+    });
+  };
+
+  const requestUpdate = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateProgress);
+  };
+
+  updateProgress();
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate, { passive: true });
+
+  const tiltTargets = document.querySelectorAll(".record-card, .card, .note-card, .handoff-box");
+  tiltTargets.forEach((target) => {
+    target.addEventListener("pointermove", (event) => {
+      if (window.matchMedia("(pointer: coarse)").matches) return;
+      const rect = target.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      target.classList.add("is-tilting");
+      target.style.setProperty("--tilt-x", (x * 5).toFixed(2) + "deg");
+      target.style.setProperty("--tilt-y", (y * -5).toFixed(2) + "deg");
+    });
+    target.addEventListener("pointerleave", () => {
+      target.classList.remove("is-tilting");
+      target.style.removeProperty("--tilt-x");
+      target.style.removeProperty("--tilt-y");
+    });
+  });
+})();
+
+/* Hero command graph interactivity */
+(function initHeroCommandGraphInteractivity() {
+  const stage = document.querySelector(".command-graph-stage");
+  if (!stage) return;
+  const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let pulseTimer;
+
+  const setFromPoint = (clientX, clientY) => {
+    const rect = stage.getBoundingClientRect();
+    const x = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+    const y = Math.min(1, Math.max(0, (clientY - rect.top) / rect.height));
+    stage.style.setProperty("--hero-x", (x * 100).toFixed(2) + "%");
+    stage.style.setProperty("--hero-y", (y * 100).toFixed(2) + "%");
+    if (!reducedMotion && !window.matchMedia("(pointer: coarse)").matches) {
+      stage.style.setProperty("--hero-depth-x", ((x - 0.5) * 22).toFixed(2) + "px");
+      stage.style.setProperty("--hero-depth-y", ((y - 0.5) * 16).toFixed(2) + "px");
+    }
+  };
+
+  stage.addEventListener("pointermove", (event) => {
+    stage.classList.add("is-interacting");
+    setFromPoint(event.clientX, event.clientY);
+  });
+
+  stage.addEventListener("pointerleave", () => {
+    stage.classList.remove("is-interacting");
+    stage.style.setProperty("--hero-depth-x", "0px");
+    stage.style.setProperty("--hero-depth-y", "0px");
+  });
+
+  stage.addEventListener("pointerdown", (event) => {
+    setFromPoint(event.clientX, event.clientY);
+    stage.classList.remove("is-pulsing");
+    window.requestAnimationFrame(() => stage.classList.add("is-pulsing"));
+    clearTimeout(pulseTimer);
+    pulseTimer = window.setTimeout(() => stage.classList.remove("is-pulsing"), 820);
   });
 })();
