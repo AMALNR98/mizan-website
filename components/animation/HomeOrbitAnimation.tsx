@@ -18,14 +18,14 @@ export function HomeOrbitAnimation() {
         <svg className="command-graph-map" viewBox="0 0 1440 760" aria-hidden="true" focusable="false">
           <defs>
             <linearGradient id="commandPath" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stopColor="#aebdca" stopOpacity="0.14" />
-              <stop offset="0.48" stopColor="#e4c77e" stopOpacity="0.82" />
-              <stop offset="1" stopColor="#aebdca" stopOpacity="0.16" />
+              <stop offset="0" stopColor="#b8c6ce" stopOpacity="0.14" />
+              <stop offset="0.48" stopColor="#58dae6" stopOpacity="0.82" />
+              <stop offset="1" stopColor="#b8c6ce" stopOpacity="0.16" />
             </linearGradient>
             <linearGradient id="commandPlane" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stopColor="#102842" stopOpacity="0.08" />
-              <stop offset="0.52" stopColor="#e4c77e" stopOpacity="0.08" />
-              <stop offset="1" stopColor="#102842" stopOpacity="0.10" />
+              <stop offset="0" stopColor="#26343f" stopOpacity="0.08" />
+              <stop offset="0.52" stopColor="#58dae6" stopOpacity="0.08" />
+              <stop offset="1" stopColor="#26343f" stopOpacity="0.10" />
             </linearGradient>
             <filter id="commandGlow" x="-60%" y="-60%" width="220%" height="220%">
               <feGaussianBlur stdDeviation="9" result="blur" />

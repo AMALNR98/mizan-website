@@ -11,13 +11,13 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://mizangov.com/">
     <link rel="stylesheet" href="assets/mizan.css?v=20261001-ar2">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/favicon.png" type="image/png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-shell">
-        <a class="brand" href="./" aria-label="MIZAN home"><span>MIZAN</span><span class="arabic" lang="ar" dir="rtl">ميزان</span></a>
+        <a class="brand" href="./" aria-label="MIZAN home"><span class="brand-logo" aria-hidden="true"></span><span class="brand-text"><span>MIZAN</span><span class="arabic" lang="ar" dir="rtl">ميزان</span></span></a>
         <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
           <a href="platform/">Platform</a>
           <a href="how-it-works/">How it works</a>
@@ -43,14 +43,14 @@
             <p class="definition-line">AI assurance means checking and documenting whether an AI use is fit for its purpose and its operating conditions.</p>
             <div class="hero-actions">
               <a class="button primary" href="contact/">Discuss a pilot</a>
-              <a class="button secondary" href="#example-record">See an example</a>
+              <a class="button secondary" href="#example-record">View the approval record</a>
             </div>
             <p class="status-line">In development. Exploring a focused design-partner pilot.</p>
           </div>
 
           <article class="record-card" aria-labelledby="hero-record-title">
             <p class="record-caption">Illustrative concept using sample information. It does not represent a live deployment or final product interface.</p>
-            <h2 id="hero-record-title">Example approval record</h2>
+            <h2 id="hero-record-title">Approval record snapshot</h2>
             <dl class="record-list">
               <dt>AI use</dt><dd>Resident service assistant (constructed)</dd>
               <dt>Purpose</dt><dd>Explain published requirements and route complex cases to staff.</dd>
@@ -65,13 +65,13 @@
       <section class="section" id="example-record" aria-labelledby="example-title">
         <div class="container split-grid">
           <div>
-            <div class="section-kicker">Example record</div>
-            <h2 id="example-title" class="section-heading medium">What an accountable AI approval can look like</h2>
-            <p class="section-lede">The decision state is word-based, not a score. The example separates what the AI may do, what remains a human decision, which evidence was reviewed, and when the approval needs review.</p>
+            <div class="section-kicker">Approval record</div>
+            <h2 id="example-title" class="section-heading medium">What an accountable AI approval record contains</h2>
+            <p class="section-lede">The approval record is the maintained artifact. It separates what the AI may do, what remains a human decision, which evidence was reviewed, and when the approval needs review.</p>
           </div>
-          <article class="record-card" aria-label="Illustrative MIZAN decision record">
+          <article class="record-card" aria-label="Illustrative MIZAN approval record">
             <p class="record-caption">Illustrative concept using sample information. It does not represent a live deployment or final product interface.</p>
-            <h3>Resident service assistant (constructed)</h3>
+            <h3>Resident service assistant approval</h3>
             <dl class="record-list">
               <dt>AI use</dt><dd>Resident-facing assistant for a public service.</dd>
               <dt>Purpose</dt><dd>Explain published requirements, help residents prepare information, and route complex cases.</dd>
@@ -99,7 +99,7 @@
         </div>
       </section>
 
-      <section class="section paper" aria-labelledby="problem-title">
+      <section class="section alt" aria-labelledby="problem-title">
         <div class="container">
           <div class="section-kicker">The problem</div>
           <h2 id="problem-title" class="section-heading medium">AI approval depends on more than a technical test</h2>
@@ -143,14 +143,16 @@
         </div>
       </section>
 
-      <section class="section" aria-labelledby="people-title">
-        <div class="container split-grid">
+      <section class="section light public-purpose-section" aria-labelledby="people-title">
+        <div class="container split-grid public-purpose-grid">
           <div>
             <div class="section-kicker">People and public purpose</div>
             <h2 id="people-title" class="section-heading medium">Keep people in control of consequential decisions</h2>
             <p class="section-lede">Public service AI should stay understandable, accessible and open to challenge. The approval record should define when staff must intervene, what decisions remain with people, and how concerns reach the responsible team.</p>
           </div>
-          <div class="note-card"><h3>Material change</h3><p>A material change is a change that could affect the basis for approval, such as a model update, a permission change, or a rise in complaints.</p></div>
+          <div class="public-purpose-visual" aria-label="Public-service AI routes people back to responsible staff">
+            <img class="public-purpose-image" src="assets/mizan-public-purpose-city.webp" srcset="assets/mizan-public-purpose-city.webp 960w, assets/mizan-public-purpose-city@2x.webp 1600w" sizes="(max-width: 760px) calc(100vw - 48px), 46vw" width="960" height="541" alt="Connected Abu Dhabi skyline representing public-purpose digital infrastructure." loading="lazy" decoding="async">
+          </div>
         </div>
       </section>
 
@@ -209,7 +211,7 @@
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div class="footer-brand"><a class="brand" href="./" aria-label="MIZAN home"><span>MIZAN</span><span class="arabic" lang="ar" dir="rtl">ميزان</span></a><p>MIZAN helps institutions connect AI evidence to accountable human decisions. Developed through the AI for Public Purpose Lab at Arrownex.</p></div>
+        <div class="footer-brand"><a class="brand" href="./" aria-label="MIZAN home"><span class="brand-logo" aria-hidden="true"></span><span class="brand-text"><span>MIZAN</span><span class="arabic" lang="ar" dir="rtl">ميزان</span></span></a><p>MIZAN helps institutions connect AI evidence to accountable human decisions. Developed through the AI for Public Purpose Lab at Arrownex.</p></div>
         <div><div class="footer-label">Explore MIZAN</div><nav class="footer-links" aria-label="Footer navigation"><a href="platform/">Platform</a><a href="how-it-works/">How it works</a><a href="use-cases/">Use cases</a><a href="research/">Research and method</a><a href="about/">About</a><a href="contact/">Contact</a><a href="ecosystem/">Supporting instruments</a><a href="privacy/">Privacy</a><a href="accessibility/">Accessibility</a><a href="terms/">Website terms</a></nav></div>
       </div>
       <div class="container footer-meta"><span>Clear, accountable decisions about AI use.</span><span>&copy; 2026 MIZAN</span></div>

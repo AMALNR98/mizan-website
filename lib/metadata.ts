@@ -12,6 +12,6 @@ export function pageMetadata(page: PageContent): Metadata {
       type: "website",
       url: page.canonical,
     },
-    icons: { icon: "/assets/favicon.svg" },
+    icons: { icon: "/assets/favicon.png", apple: "/assets/apple-touch-icon.png" },
   };
 }
