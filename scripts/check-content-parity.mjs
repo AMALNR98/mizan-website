@@ -47,4 +47,4 @@ if (failures.length) {
 }
 
 console.log("Content/SEO parity passed for " + Object.keys(pages).length + " migrated pages.");
-console.log("Redirected legacy routes: /authority/ -> /platform/, /evidence/ -> /research/, /public-purpose/ -> /use-cases/");
+console.log("Redirected legacy routes: /authority/ -> /platform/, /evidence/ -> /research/, /public-purpose/ -> /");

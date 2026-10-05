@@ -54,7 +54,6 @@ const translations = new Map([
   ["Skip to content", "انتقل إلى المحتوى"],
   ["Platform", "المنصة"],
   ["How it works", "كيف يعمل"],
-  ["Use cases", "حالات الاستخدام"],
   ["Research and method", "البحث والمنهج"],
   ["About", "من نحن"],
   ["Discuss a pilot", "ناقش تجربة تطبيقية"],
@@ -106,6 +105,142 @@ const translations = new Map([
 
 
 const arabicExtraPairs = [
+  [
+    "Updated soon",
+    "سيتم التحديث قريباً"
+  ],
+  [
+    "The approval can continue, be limited, be paused, or be stopped. MIZAN records the reason and review date in plain words.",
+    "يمكن أن تستمر الموافقة أو تُقيد أو تُوقف مؤقتاً أو تُنهى. يسجل ميزان السبب وتاريخ المراجعة بعبارات واضحة."
+  ],
+  [
+    "What can happen?",
+    "ما الذي يمكن أن يحدث؟"
+  ],
+  [
+    "If the assistant starts making eligibility decisions, the old approval no longer fits. The team must check the evidence and decide again before the assistant can do that new work.",
+    "إذا بدأ المساعد باتخاذ قرارات الأهلية، فلن تعود الموافقة القديمة مناسبة. يجب على الفريق التحقق من الأدلة واتخاذ القرار مرة أخرى قبل أن يؤدي المساعد هذا العمل الجديد."
+  ],
+  [
+    "If the AI use changes, review the approval",
+    "إذا تغير استخدام الذكاء الاصطناعي، راجع الموافقة"
+  ],
+  [
+    "Change",
+    "تغيير"
+  ],
+  [
+    "This example shows how one assistant gets clear rules, evidence, and a review date.",
+    "يوضح هذا المثال كيف يحصل مساعد واحد على قواعد واضحة وأدلة وتاريخ مراجعة."
+  ],
+  [
+    "Example",
+    "مثال"
+  ],
+  [
+    "MIZAN helps your team define the AI use, check the evidence, approve it, and review it when things change.",
+    "يساعد ميزان فريقك على تحديد استخدام الذكاء الاصطناعي، والتحقق من الأدلة، والموافقة عليه، ومراجعته عند حدوث تغيير."
+  ],
+  [
+    "How MIZAN works",
+    "كيف يعمل ميزان"
+  ],
+  [
+    "Continue, limit, pause, or stop approval.",
+    "استمرار الموافقة أو تقييدها أو إيقافها مؤقتاً أو إنهاؤها."
+  ],
+  [
+    "What changed and which evidence is affected.",
+    "ما الذي تغير والأدلة المتأثرة."
+  ],
+  [
+    "A record of changes that may affect approval.",
+    "سجل بالتغييرات التي قد تؤثر في الموافقة."
+  ],
+  [
+    "The team running the service.",
+    "الفريق الذي يدير الخدمة."
+  ],
+  [
+    "Updates, incidents, complaints, or source changes.",
+    "التحديثات أو الحوادث أو الشكاوى أو تغييرات المصادر."
+  ],
+  [
+    "The decision, reasons, conditions, and review date.",
+    "القرار والأسباب والشروط وتاريخ المراجعة."
+  ],
+  [
+    "The person allowed to make the decision.",
+    "الشخص المخول باتخاذ القرار."
+  ],
+  [
+    "Review results and suggested conditions.",
+    "نتائج المراجعة والشروط المقترحة."
+  ],
+  [
+    "What is ready, what is missing, and any conditions.",
+    "ما هو جاهز، وما هو ناقص، وأي شروط."
+  ],
+  [
+    "Specialists and reviewers.",
+    "المتخصصون والمراجعون."
+  ],
+  [
+    "The evidence and anything still missing.",
+    "الأدلة وأي شيء ما زال ناقصاً."
+  ],
+  [
+    "One evidence list with review status.",
+    "قائمة أدلة واحدة مع حالة المراجعة."
+  ],
+  [
+    "Policies, reviews, tests, and approved sources.",
+    "السياسات والمراجعات والاختبارات والمصادر المعتمدة."
+  ],
+  [
+    "A clear scope for approval.",
+    "نطاق واضح للموافقة."
+  ],
+  [
+    "What the AI is for, who owns it, and what it can and cannot do.",
+    "الغرض من الذكاء الاصطناعي، ومن يملكه، وما يمكنه وما لا يمكنه فعله."
+  ],
+  [
+    "Review again",
+    "المراجعة مرة أخرى"
+  ],
+  [
+    "Approve",
+    "الموافقة"
+  ],
+  [
+    "Check",
+    "تحقق"
+  ],
+  [
+    "Collect evidence",
+    "جمع الأدلة"
+  ],
+  [
+    "MIZAN gives you:",
+    "ما يقدمه ميزان:"
+  ],
+  [
+    "People involved:",
+    "الأشخاص المعنيون:"
+  ],
+  [
+    "You bring:",
+    "ما تقدمه:"
+  ],
+  [
+    "Six clear steps",
+    "ست خطوات واضحة"
+  ],
+  [
+    "Workflow",
+    "سير العمل"
+  ],
   [
     "Connecting AI delivery with institutional responsibility",
     "ربط تنفيذ الذكاء الاصطناعي بالمسؤولية المؤسسية"
@@ -185,10 +320,6 @@ const arabicExtraPairs = [
   [
     "Evidence and method has moved.",
     "تم نقل محتوى الأدلة والمنهج."
-  ],
-  [
-    "Use cases has moved.",
-    "تم نقل محتوى حالات الاستخدام."
   ],
   [
     "This content is now part of the updated MIZAN site structure.",
@@ -1289,14 +1420,6 @@ const arabicExtraPairs = [
   [
     "Public pages are provided for general information and discussion. Formal pilot scope, responsibilities, confidentiality and data handling should be agreed in writing before work begins.",
     "تُقدم الصفحات العامة للمعلومات العامة والنقاش. ويجب الاتفاق كتابة على نطاق التجربة الرسمية والمسؤوليات والسرية ومعالجة البيانات قبل بدء العمل."
-  ],
-  [
-    "AI assurance where responsibility matters",
-    "ضمان الذكاء الاصطناعي حيث تكون المسؤولية مهمة"
-  ],
-  [
-    "MIZAN is designed for institutions that need a clear basis for AI approval, human supervision and review. Our initial focus is public services and education, with potential applications across regulated sectors.",
-    "صُمم ميزان للمؤسسات التي تحتاج إلى أساس واضح للموافقة على الذكاء الاصطناعي، وإشراف بشري، ومراجعة. ينصب تركيزنا الأولي على الخدمات العامة والتعليم، مع تطبيقات محتملة عبر القطاعات المنظمة."
   ],
   [
     "Government and public services",

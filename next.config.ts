@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
       { source: "/authority", destination: "/platform/", permanent: true },
       { source: "/evidence/", destination: "/research/", permanent: true },
       { source: "/evidence", destination: "/research/", permanent: true },
-      { source: "/public-purpose/", destination: "/use-cases/", permanent: true },
-      { source: "/public-purpose", destination: "/use-cases/", permanent: true },
+      { source: "/public-purpose/", destination: "/", permanent: true },
+      { source: "/public-purpose", destination: "/", permanent: true },
     ];
   },
 };
