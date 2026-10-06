@@ -579,7 +579,7 @@ button { color: inherit; }
   font-size: 0.64rem;
 }
 
-.workflow {
+.sequence {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 1px;
@@ -592,17 +592,17 @@ button { color: inherit; }
   background: var(--line);
 }
 
-.workflow li {
+.sequence li {
   min-height: 180px;
   background: rgba(21, 27, 32, 0.9);
   padding: 20px;
 }
 
-.workflow li.is-decision {
+.sequence li.is-decision {
   background: linear-gradient(180deg, rgba(46, 199, 211, 0.18), rgba(21, 27, 32, 0.94));
 }
 
-.workflow span {
+.sequence span {
   display: block;
   color: var(--color-accent);
   font-size: 0.72rem;
@@ -610,14 +610,14 @@ button { color: inherit; }
   letter-spacing: 0.1em;
 }
 
-.workflow strong {
+.sequence strong {
   display: block;
   margin-top: 18px;
   color: var(--color-text-on-dark);
   font-size: 1.05rem;
 }
 
-.workflow p {
+.sequence p {
   margin-top: 10px;
   font-size: 0.9rem;
 }
@@ -1116,7 +1116,7 @@ button { color: inherit; }
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .workflow {
+  .sequence {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1139,7 +1139,7 @@ button { color: inherit; }
   .grid-2,
   .grid-3,
   .grid-4,
-  .workflow,
+  .sequence,
   .architecture-flow,
   .allowed-pair {
     grid-template-columns: 1fr;
@@ -1522,7 +1522,7 @@ button { color: inherit; }
 .motion-ready .handoff-box,
 .motion-ready .instrument-card,
 .motion-ready .person-card,
-.motion-ready .workflow li,
+.motion-ready .sequence li,
 .motion-ready .architecture-flow article {
   opacity: 0;
   transform: translateY(26px);
@@ -1537,9 +1537,9 @@ button { color: inherit; }
 .motion-ready .is-visible .handoff-box,
 .motion-ready .is-visible .instrument-card,
 .motion-ready .is-visible .person-card,
-.motion-ready .is-visible.workflow li,
+.motion-ready .is-visible.sequence li,
 .motion-ready .is-visible.architecture-flow article,
-.motion-ready .workflow li.is-visible,
+.motion-ready .sequence li.is-visible,
 .motion-ready .architecture-flow article.is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -1551,7 +1551,7 @@ button { color: inherit; }
 .record-card,
 .instrument-card,
 .handoff-box,
-.workflow li,
+.sequence li,
 .architecture-flow article {
   position: relative;
   overflow: hidden;
@@ -1563,7 +1563,7 @@ button { color: inherit; }
 .record-card::after,
 .instrument-card::after,
 .handoff-box::after,
-.workflow li::after,
+.sequence li::after,
 .architecture-flow article::after {
   content: "";
   position: absolute;
@@ -1579,7 +1579,7 @@ button { color: inherit; }
 .record-card:hover,
 .instrument-card:hover,
 .handoff-box:hover,
-.workflow li:hover,
+.sequence li:hover,
 .architecture-flow article:hover {
   transform: translateY(-4px);
   border-color: var(--color-accent-border);
@@ -1591,7 +1591,7 @@ button { color: inherit; }
 .record-card:hover::after,
 .instrument-card:hover::after,
 .handoff-box:hover::after,
-.workflow li:hover::after,
+.sequence li:hover::after,
 .architecture-flow article:hover::after {
   opacity: 1;
 }
@@ -1700,7 +1700,7 @@ html[dir="rtl"] .orbit-keyword::before {
   .motion-ready .handoff-box,
   .motion-ready .instrument-card,
   .motion-ready .person-card,
-  .motion-ready .workflow li,
+  .motion-ready .sequence li,
   .motion-ready .architecture-flow article {
     opacity: 1 !important;
     transform: none !important;
@@ -1709,7 +1709,7 @@ html[dir="rtl"] .orbit-keyword::before {
   }
 }
 
-/* Restored homepage graphics layer: product demo, evidence convergence, and workflow map. */
+/* Restored homepage graphics layer: product demo, evidence convergence, and sequence map. */
 .orbit-landscape + main .home-hero {
   min-height: 860px;
   overflow: hidden;
@@ -1832,7 +1832,7 @@ html[dir="rtl"] .orbit-keyword::before {
   backdrop-filter: blur(10px);
 }
 
-.workflow {
+.sequence {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1850,7 +1850,7 @@ html[dir="rtl"] .orbit-keyword::before {
   overflow: hidden;
 }
 
-.workflow::before {
+.sequence::before {
   content: "";
   position: absolute;
   inset: 24px;
@@ -1858,10 +1858,10 @@ html[dir="rtl"] .orbit-keyword::before {
   border-radius: 999px;
   border: 1px solid rgba(88, 218, 230, 0.28);
   transform: rotate(-8deg);
-  animation: workflowOrbit 12s linear infinite;
+  animation: sequenceOrbit 12s linear infinite;
 }
 
-.workflow::after {
+.sequence::after {
   content: "";
   position: absolute;
   left: 12%;
@@ -1873,7 +1873,7 @@ html[dir="rtl"] .orbit-keyword::before {
   animation: connectorScan 5.6s ease-in-out infinite;
 }
 
-.workflow li {
+.sequence li {
   z-index: 1;
   min-height: 210px;
   border-radius: 10px;
@@ -1881,7 +1881,7 @@ html[dir="rtl"] .orbit-keyword::before {
   backdrop-filter: blur(12px);
 }
 
-.workflow li.is-decision {
+.sequence li.is-decision {
   border-color: var(--color-accent-border);
   background: linear-gradient(180deg, rgba(46, 199, 211, 0.20), rgba(21, 27, 32, 0.84));
   box-shadow: 0 24px 70px rgba(46, 199, 211, 0.12);
@@ -1939,7 +1939,7 @@ html[dir="rtl"] .orbit-keyword::before {
   50% { opacity: 1; filter: saturate(1.25); }
 }
 
-@keyframes workflowOrbit {
+@keyframes sequenceOrbit {
   to { transform: rotate(352deg); }
 }
 
@@ -1953,7 +1953,7 @@ html[dir="rtl"] .orbit-keyword::before {
     animation: none;
   }
 
-  .workflow {
+  .sequence {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 24px;
   }
@@ -1964,13 +1964,13 @@ html[dir="rtl"] .orbit-keyword::before {
     font-size: clamp(2.7rem, 14vw, 4.6rem);
   }
 
-  .workflow {
+  .sequence {
     grid-template-columns: 1fr;
     padding: 16px;
   }
 
-  .workflow::before,
-  .workflow::after,
+  .sequence::before,
+  .sequence::after,
   .section.alt .grid-3::before,
   .handoff::before,
   .architecture-flow::before {
@@ -2500,10 +2500,10 @@ html[dir="rtl"] .orbit-keyword::before {
   }
 }
 
-/* Workflow orbit animation: evidence to accountable decision */
-.home-hero ~ .section .workflow {
-  --workflow-orbit-accent: rgba(88, 218, 230, 0.72);
-  --workflow-orbit-blue: rgba(174, 189, 202, 0.18);
+/* Process animation: evidence to accountable decision */
+.home-hero ~ .section .sequence {
+  --sequence-orbit-accent: rgba(88, 218, 230, 0.72);
+  --sequence-orbit-blue: rgba(174, 189, 202, 0.18);
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -2518,7 +2518,7 @@ html[dir="rtl"] .orbit-keyword::before {
   background-size: auto, auto, auto, 48px 48px, 48px 48px, auto;
 }
 
-.home-hero ~ .section .workflow::before {
+.home-hero ~ .section .sequence::before {
   content: "";
   position: absolute;
   left: 8%;
@@ -2531,11 +2531,11 @@ html[dir="rtl"] .orbit-keyword::before {
   border-radius: 50%;
   transform: translateY(-50%) rotate(-7deg);
   box-shadow: inset 0 0 48px rgba(88, 218, 230, 0.05), 0 0 36px rgba(88, 218, 230, 0.06);
-  animation: workflowOrbitalRing 18s linear infinite;
+  animation: sequenceOrbitalRing 18s linear infinite;
   z-index: 0;
 }
 
-.home-hero ~ .section .workflow::after {
+.home-hero ~ .section .sequence::after {
   content: "";
   position: absolute;
   inset: 44% 7% auto;
@@ -2546,11 +2546,11 @@ html[dir="rtl"] .orbit-keyword::before {
     linear-gradient(90deg, transparent, rgba(174, 189, 202, 0.20), rgba(88, 218, 230, 0.64), rgba(174, 189, 202, 0.20), transparent);
   box-shadow: 0 0 28px rgba(88, 218, 230, 0.18);
   opacity: 0.9;
-  animation: workflowEvidenceScan 7.4s ease-in-out infinite;
+  animation: sequenceEvidenceScan 7.4s ease-in-out infinite;
   z-index: 1;
 }
 
-.home-hero ~ .section .workflow li {
+.home-hero ~ .section .sequence li {
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -2559,16 +2559,16 @@ html[dir="rtl"] .orbit-keyword::before {
     radial-gradient(circle at var(--spot-x, 16%) var(--spot-y, 18%), rgba(88, 218, 230, 0.09), transparent 28%),
     linear-gradient(180deg, rgba(21, 27, 32, 0.86), rgba(16, 20, 24, 0.92));
   transition: transform 260ms var(--ease), border-color 260ms ease, box-shadow 260ms ease, background 260ms ease;
-  animation: workflowCardBreath 7.2s ease-in-out infinite;
+  animation: sequenceCardBreath 7.2s ease-in-out infinite;
 }
 
-.home-hero ~ .section .workflow li:nth-child(2) { animation-delay: -1.1s; }
-.home-hero ~ .section .workflow li:nth-child(3) { animation-delay: -2.2s; }
-.home-hero ~ .section .workflow li:nth-child(4) { animation-delay: -3.3s; }
-.home-hero ~ .section .workflow li:nth-child(5) { animation-delay: -4.4s; }
-.home-hero ~ .section .workflow li:nth-child(6) { animation-delay: -5.5s; }
+.home-hero ~ .section .sequence li:nth-child(2) { animation-delay: -1.1s; }
+.home-hero ~ .section .sequence li:nth-child(3) { animation-delay: -2.2s; }
+.home-hero ~ .section .sequence li:nth-child(4) { animation-delay: -3.3s; }
+.home-hero ~ .section .sequence li:nth-child(5) { animation-delay: -4.4s; }
+.home-hero ~ .section .sequence li:nth-child(6) { animation-delay: -5.5s; }
 
-.home-hero ~ .section .workflow li::before {
+.home-hero ~ .section .sequence li::before {
   content: "";
   position: absolute;
   width: 130px;
@@ -2583,7 +2583,7 @@ html[dir="rtl"] .orbit-keyword::before {
   transition: opacity 260ms ease, transform 260ms ease;
 }
 
-.home-hero ~ .section .workflow li::after {
+.home-hero ~ .section .sequence li::after {
   content: "";
   position: absolute;
   left: -34%;
@@ -2592,35 +2592,35 @@ html[dir="rtl"] .orbit-keyword::before {
   height: 100%;
   background: linear-gradient(100deg, transparent, rgba(244, 248, 251, 0.08), transparent);
   transform: skewX(-18deg);
-  animation: workflowCardSweep 8.5s ease-in-out infinite;
+  animation: sequenceCardSweep 8.5s ease-in-out infinite;
   animation-delay: inherit;
 }
 
-.home-hero ~ .section .workflow li:hover,
-.home-hero ~ .section .workflow li.is-decision {
+.home-hero ~ .section .sequence li:hover,
+.home-hero ~ .section .sequence li.is-decision {
   border-color: rgba(88, 218, 230, 0.44);
   box-shadow: 0 24px 90px rgba(0, 0, 0, 0.22), 0 0 54px rgba(88, 218, 230, 0.11);
 }
 
-.home-hero ~ .section .workflow li:hover::before,
-.home-hero ~ .section .workflow li.is-decision::before {
+.home-hero ~ .section .sequence li:hover::before,
+.home-hero ~ .section .sequence li.is-decision::before {
   opacity: 1;
   transform: scale(1);
 }
 
-.home-hero ~ .section .workflow li.is-decision {
+.home-hero ~ .section .sequence li.is-decision {
   background:
     radial-gradient(circle at 20% 12%, rgba(88, 218, 230, 0.18), transparent 30%),
     linear-gradient(180deg, rgba(46, 199, 211, 0.22), rgba(21, 27, 32, 0.88));
 }
 
-.home-hero ~ .section .workflow span {
+.home-hero ~ .section .sequence span {
   display: inline-flex;
   align-items: center;
   gap: 8px;
 }
 
-.home-hero ~ .section .workflow span::before {
+.home-hero ~ .section .sequence span::before {
   content: "";
   width: 7px;
   height: 7px;
@@ -2630,11 +2630,11 @@ html[dir="rtl"] .orbit-keyword::before {
   opacity: 0.9;
 }
 
-.home-hero ~ .section .workflow strong {
+.home-hero ~ .section .sequence strong {
   position: relative;
 }
 
-.home-hero ~ .section .workflow strong::after {
+.home-hero ~ .section .sequence strong::after {
   content: "";
   position: absolute;
   left: 0;
@@ -2643,58 +2643,58 @@ html[dir="rtl"] .orbit-keyword::before {
   height: 2px;
   background: linear-gradient(90deg, rgba(88, 218, 230, 0.86), transparent);
   opacity: 0.9;
-  animation: workflowTitleTrace 7.2s ease-in-out infinite;
+  animation: sequenceTitleTrace 7.2s ease-in-out infinite;
   animation-delay: inherit;
 }
 
-@keyframes workflowOrbitalRing {
+@keyframes sequenceOrbitalRing {
   0% { transform: translateY(-50%) rotate(-7deg); opacity: 0.68; }
   50% { opacity: 1; }
   100% { transform: translateY(-50%) rotate(353deg); opacity: 0.68; }
 }
 
-@keyframes workflowEvidenceScan {
+@keyframes sequenceEvidenceScan {
   0%, 100% { --scan-x: 10%; opacity: 0.45; filter: saturate(0.85); }
   45%, 55% { --scan-x: 50%; opacity: 1; filter: saturate(1.18); }
   90% { --scan-x: 90%; opacity: 0.52; }
 }
 
-@keyframes workflowCardBreath {
+@keyframes sequenceCardBreath {
   0%, 100% { transform: translateY(0); border-color: rgba(174, 189, 202, 0.10); }
   50% { transform: translateY(-7px); border-color: rgba(88, 218, 230, 0.22); }
 }
 
-@keyframes workflowCardSweep {
+@keyframes sequenceCardSweep {
   0%, 18% { transform: translateX(0) skewX(-18deg); opacity: 0; }
   38% { opacity: 1; }
   60%, 100% { transform: translateX(430%) skewX(-18deg); opacity: 0; }
 }
 
-@keyframes workflowTitleTrace {
+@keyframes sequenceTitleTrace {
   0%, 30% { right: 100%; opacity: 0; }
   48%, 70% { right: 18%; opacity: 0.86; }
   100% { right: 0; opacity: 0; }
 }
 
 @media (max-width: 1040px) {
-  .home-hero ~ .section .workflow::before {
+  .home-hero ~ .section .sequence::before {
     left: -20%;
     right: -20%;
     height: 34%;
   }
 
-  .home-hero ~ .section .workflow::after {
+  .home-hero ~ .section .sequence::after {
     inset-inline: 8%;
   }
 }
 
 @media (max-width: 680px) {
-  .home-hero ~ .section .workflow::before,
-  .home-hero ~ .section .workflow::after {
+  .home-hero ~ .section .sequence::before,
+  .home-hero ~ .section .sequence::after {
     display: block;
   }
 
-  .home-hero ~ .section .workflow::before {
+  .home-hero ~ .section .sequence::before {
     left: 10%;
     right: 10%;
     top: 50%;
@@ -2702,7 +2702,7 @@ html[dir="rtl"] .orbit-keyword::before {
     border-radius: 999px;
   }
 
-  .home-hero ~ .section .workflow::after {
+  .home-hero ~ .section .sequence::after {
     top: 50%;
     left: calc(50% - 1px);
     right: auto;
@@ -2714,12 +2714,12 @@ html[dir="rtl"] .orbit-keyword::before {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-hero ~ .section .workflow,
-  .home-hero ~ .section .workflow::before,
-  .home-hero ~ .section .workflow::after,
-  .home-hero ~ .section .workflow li,
-  .home-hero ~ .section .workflow li::after,
-  .home-hero ~ .section .workflow strong::after {
+  .home-hero ~ .section .sequence,
+  .home-hero ~ .section .sequence::before,
+  .home-hero ~ .section .sequence::after,
+  .home-hero ~ .section .sequence li,
+  .home-hero ~ .section .sequence li::after,
+  .home-hero ~ .section .sequence strong::after {
     animation: none !important;
   }
 }
@@ -2806,7 +2806,7 @@ html[dir="rtl"] .story-section .section-pulse::after { left: auto; right: calc(v
 .motion-ready .hero-copy > *:nth-child(5) { animation-delay: 330ms; }
 .record-card, .card, .note-card, .handoff-box, .instrument-card, .person-card { transform-style: preserve-3d; transition: transform 260ms var(--ease), border-color 260ms ease, box-shadow 260ms ease; }
 .record-card.is-tilting, .card.is-tilting, .note-card.is-tilting, .handoff-box.is-tilting { transform: perspective(1000px) rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg)) translateY(-3px); }
-.card, .note-card, .instrument-card, .person-card, .handoff-box, .workflow li, .architecture-flow article { background-image: radial-gradient(circle at var(--spot-x, 20%) var(--spot-y, 20%), rgba(88, 218, 230, 0.12), transparent 24%), linear-gradient(180deg, rgba(244, 248, 251, 0.025), rgba(244, 248, 251, 0)); }
+.card, .note-card, .instrument-card, .person-card, .handoff-box, .sequence li, .architecture-flow article { background-image: radial-gradient(circle at var(--spot-x, 20%) var(--spot-y, 20%), rgba(88, 218, 230, 0.12), transparent 24%), linear-gradient(180deg, rgba(244, 248, 251, 0.025), rgba(244, 248, 251, 0)); }
 .record-card { background-image: radial-gradient(circle at var(--spot-x, 50%) var(--spot-y, 18%), rgba(88, 218, 230, 0.16), transparent 26%), linear-gradient(rgba(174, 189, 202, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(174, 189, 202, 0.04) 1px, transparent 1px), linear-gradient(180deg, rgba(21, 27, 32, 0.92), rgba(16, 20, 24, 0.82)); background-size: auto, 44px 44px, 44px 44px, auto; }
 .record-list dt, .record-list dd { transition: color 220ms ease, border-color 220ms ease, transform 220ms var(--ease); }
 .record-card:hover .record-list dt, .record-card:focus-within .record-list dt { color: var(--color-accent-soft); }

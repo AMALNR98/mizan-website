@@ -238,8 +238,8 @@ const arabicExtraPairs = [
     "ست خطوات واضحة"
   ],
   [
-    "Workflow",
-    "سير العمل"
+    "Process",
+    "العملية"
   ],
   [
     "Connecting AI delivery with institutional responsibility",
@@ -430,8 +430,8 @@ const arabicExtraPairs = [
     "تظهر الخطوات الست نفسها في جميع صفحات الموقع: تحديد، أدلة، تقييم، تصريح، مراقبة، وإعادة تصريح. ويتبع المثال أدناه مساعد دعم الطلاب (مثال مُنشأ)."
   ],
   [
-    "Six-step workflow",
-    "سير عمل من ست خطوات"
+    "Clear steps",
+    "خطوات واضحة"
   ],
   [
     "The human decision point stays visible",
@@ -774,8 +774,8 @@ const arabicExtraPairs = [
     "تحديد ما إذا كانت الموافقة ستستمر أو تُقيد أو تُعلق أو تُسحب."
   ],
   [
-    "See the full workflow",
-    "اطلع على سير العمل الكامل"
+    "Learn more",
+    "اطلع على العملية الكامل"
   ],
   [
     "Where MIZAN sits",
@@ -1014,8 +1014,8 @@ const arabicExtraPairs = [
     "ناقش متطلباتك"
   ],
   [
-    "See the example workflow",
-    "اطلع على مثال سير العمل"
+    "Learn more",
+    "اطلع على مثال العملية"
   ],
   [
     "Resident-facing service assistant.",
@@ -1122,8 +1122,8 @@ const arabicExtraPairs = [
     "قيد التطوير"
   ],
   [
-    "Evidence import workflow",
-    "سير عمل استيراد الأدلة"
+    "Evidence import process",
+    "عملية استيراد الأدلة"
   ],
   [
     "Connector requirements to be agreed during pilot scoping.",
@@ -1775,7 +1775,7 @@ if (contactForm) {
     ".handoff-box",
     ".instrument-card",
     ".person-card",
-    ".workflow li",
+    ".sequence li",
     ".architecture-flow article"
   ].join(","));
 
@@ -1793,7 +1793,7 @@ if (contactForm) {
     revealTargets.forEach((target) => target.classList.add("is-visible"));
   }
 
-  document.querySelectorAll(".card, .note-card, .record-card, .instrument-card, .handoff-box, .workflow li, .architecture-flow article").forEach((card) => {
+  document.querySelectorAll(".card, .note-card, .record-card, .instrument-card, .handoff-box, .sequence li, .architecture-flow article").forEach((card) => {
     card.addEventListener("pointermove", (event) => {
       const rect = card.getBoundingClientRect();
       card.style.setProperty("--spot-x", `${event.clientX - rect.left}px`);
