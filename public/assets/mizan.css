@@ -3199,6 +3199,89 @@ html[dir="rtl"] .card:hover .allowed-pair p:last-child { transform: translateX(5
   }
 }
 
+.video-section {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(88, 218, 230, 0.10), transparent 28%),
+    radial-gradient(circle at 82% 70%, rgba(174, 189, 202, 0.08), transparent 30%),
+    linear-gradient(180deg, var(--color-bg-dark), var(--color-bg-dark-2));
+}
+
+.video-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(420px, 1.22fr);
+  gap: clamp(32px, 6vw, 78px);
+  align-items: center;
+}
+
+.video-copy[data-lang="ar"],
+.video-panel[data-lang="ar"] {
+  display: none;
+}
+
+html[lang="ar"] .video-copy[data-lang="en"],
+html[lang="ar"] .video-panel[data-lang="en"] {
+  display: none;
+}
+
+html[lang="ar"] .video-copy[data-lang="ar"],
+html[lang="ar"] .video-panel[data-lang="ar"] {
+  display: block;
+}
+
+.video-stage {
+  position: relative;
+  border: 1px solid rgba(88, 218, 230, 0.38);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(rgba(174, 189, 202, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(174, 189, 202, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(21, 27, 32, 0.94), rgba(16, 20, 24, 0.96));
+  background-size: 44px 44px, 44px 44px, auto;
+  padding: clamp(10px, 1.4vw, 16px);
+  box-shadow: 0 28px 86px rgba(0, 0, 0, 0.30), 0 0 42px rgba(88, 218, 230, 0.10);
+}
+
+.video-stage::before {
+  content: "MIZAN";
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  inset-inline-end: 18px;
+  color: rgba(158, 234, 241, 0.34);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  pointer-events: none;
+}
+
+.video-panel {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(174, 189, 202, 0.16);
+  border-radius: calc(var(--radius) - 1px);
+  background: #0b1014;
+}
+
+.video-panel iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+html[lang="ar"] .video-copy {
+  text-align: right;
+}
+
+@media (max-width: 860px) {
+  .video-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .hidden-field { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 /* Clear active navigation state */

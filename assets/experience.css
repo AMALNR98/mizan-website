@@ -475,7 +475,7 @@ h1, h2, h3, h4 { margin: 0; color: var(--color-text-on-dark); letter-spacing: 0;
 .path-node { position: absolute; z-index: 4; right: 3%; }
 .path-node i { display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); box-shadow: 0 0 12px rgba(88, 218, 230, .75); }
 .path-node span { display: none; }
-.mandate-node { top: 14%; }.authority-node { top: 32%; }.accountability-node { top: 67%; }.operation-node { top: 85%; }
+.path-node-a { top: 14%; }.path-node-b { top: 32%; }.path-node-c { top: 67%; }.path-node-d { top: 85%; }
 .mizan-marker { position: absolute; z-index: 5; right: -1%; top: 50%; display: flex; align-items: center; gap: 7px; width: 112px; border: 1px solid var(--color-accent-border); border-radius: 999px; background: rgba(17, 24, 29, .94); padding: 6px; transform: translateY(-50%); box-shadow: 0 0 30px rgba(46, 199, 211, .16); }
 .mizan-marker > span { display: grid; place-items: center; width: 25px; height: 25px; flex: 0 0 auto; border: 1px solid var(--color-accent); border-radius: 50%; color: var(--color-accent); font-size: .65rem; font-weight: 800; }
 .mizan-marker strong { color: var(--color-text-on-dark); font-size: .61rem; letter-spacing: .08em; }

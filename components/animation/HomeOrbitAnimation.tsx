@@ -1,6 +1,6 @@
 export function HomeOrbitAnimation() {
   const keywords = [
-    { className: "k1", label: "Policy" },
+    { className: "k1", label: "Purpose" },
     { className: "k2", label: "Evidence" },
     { className: "k3", label: "Review" },
     { className: "k4", label: "Approval" },
