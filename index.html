@@ -11,17 +11,17 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://mizangov.com/">
     <link rel="stylesheet" href="assets/mizan.css?v=20261001-ar2">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/favicon.png" type="image/png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-shell">
-        <a class="brand" href="./" aria-label="MIZAN home"><span>MIZAN</span><span class="arabic" lang="ar" dir="rtl">ميزان</span></a>
+        <a class="brand" href="./" aria-label="MIZAN home"><span class="brand-logo" aria-hidden="true"></span><span class="brand-text"><span>MIZAN</span><span class="arabic" lang="ar" dir="rtl">ميزان</span></span></a>
         <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
           <a href="platform/">Platform</a>
           <a href="how-it-works/">How it works</a>
-          <a href="use-cases/">Use cases</a>
+          
           <a href="research/">Research and method</a>
           <a href="about/">About</a>
           <a class="nav-cta" href="contact/">Discuss a pilot</a>
@@ -33,8 +33,7 @@
       </div>
     </header>
 
-    <main id="main">
-      <section class="home-hero" aria-labelledby="hero-title">
+    <main id="main"><section class="home-hero" aria-labelledby="hero-title">
         <div class="container hero-grid">
           <div class="hero-copy">
             <div class="eyebrow">AI assurance for public institutions</div>
@@ -43,14 +42,14 @@
             <p class="definition-line">AI assurance means checking and documenting whether an AI use is fit for its purpose and its operating conditions.</p>
             <div class="hero-actions">
               <a class="button primary" href="contact/">Discuss a pilot</a>
-              <a class="button secondary" href="#example-record">See an example</a>
+              <a class="button secondary" href="#example-record">View the approval record</a>
             </div>
             <p class="status-line">In development. Exploring a focused design-partner pilot.</p>
           </div>
 
           <article class="record-card" aria-labelledby="hero-record-title">
             <p class="record-caption">Illustrative concept using sample information. It does not represent a live deployment or final product interface.</p>
-            <h2 id="hero-record-title">Example approval record</h2>
+            <h2 id="hero-record-title">Approval record snapshot</h2>
             <dl class="record-list">
               <dt>AI use</dt><dd>Resident service assistant (constructed)</dd>
               <dt>Purpose</dt><dd>Explain published requirements and route complex cases to staff.</dd>
@@ -62,16 +61,39 @@
         </div>
       </section>
 
+      <section class="section video-section" aria-label="MIZAN introduction video">
+        <div class="container video-layout">
+          <div class="video-copy" data-lang="en">
+            <div class="section-kicker">Watch MIZAN</div>
+            <h2 class="section-heading medium">A short introduction to accountable AI approval</h2>
+            <p class="section-lede">See how MIZAN frames evidence, authority and human responsibility around a specific AI use.</p>
+          </div>
+          <div class="video-copy" data-lang="ar" lang="ar" dir="rtl">
+            <div class="section-kicker">شاهد ميزان</div>
+            <h2 class="section-heading medium">مقدمة قصيرة عن الموافقة المسؤولة على استخدام الذكاء الاصطناعي</h2>
+            <p class="section-lede">تعرّف على كيفية ربط ميزان بين الأدلة والصلاحية والمسؤولية البشرية حول استخدام محدد للذكاء الاصطناعي.</p>
+          </div>
+          <div class="video-stage">
+            <div class="video-panel" data-lang="en">
+              <iframe src="https://www.youtube-nocookie.com/embed/NcqaNwj7pbU" title="MIZAN introduction video in English" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-panel" data-lang="ar" lang="ar" dir="rtl">
+              <iframe src="https://www.youtube-nocookie.com/embed/RT5MB9hcMls" title="فيديو تعريفي عن ميزان باللغة العربية" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="example-record" aria-labelledby="example-title">
         <div class="container split-grid">
           <div>
-            <div class="section-kicker">Example record</div>
-            <h2 id="example-title" class="section-heading medium">What an accountable AI approval can look like</h2>
-            <p class="section-lede">The decision state is word-based, not a score. The example separates what the AI may do, what remains a human decision, which evidence was reviewed, and when the approval needs review.</p>
+            <div class="section-kicker">Approval record</div>
+            <h2 id="example-title" class="section-heading medium">What an accountable AI approval record contains</h2>
+            <p class="section-lede">The approval record is the maintained artifact. It separates what the AI may do, what remains a human decision, which evidence was reviewed, and when the approval needs review.</p>
           </div>
-          <article class="record-card" aria-label="Illustrative MIZAN decision record">
+          <article class="record-card" aria-label="Illustrative MIZAN approval record">
             <p class="record-caption">Illustrative concept using sample information. It does not represent a live deployment or final product interface.</p>
-            <h3>Resident service assistant (constructed)</h3>
+            <h3>Resident service assistant approval</h3>
             <dl class="record-list">
               <dt>AI use</dt><dd>Resident-facing assistant for a public service.</dd>
               <dt>Purpose</dt><dd>Explain published requirements, help residents prepare information, and route complex cases.</dd>
@@ -99,7 +121,7 @@
         </div>
       </section>
 
-      <section class="section paper" aria-labelledby="problem-title">
+      <section class="section alt" aria-labelledby="problem-title">
         <div class="container">
           <div class="section-kicker">The problem</div>
           <h2 id="problem-title" class="section-heading medium">AI approval depends on more than a technical test</h2>
@@ -112,57 +134,16 @@
         </div>
       </section>
 
-      <section class="section" aria-labelledby="workflow-title">
-        <div class="container">
-          <div class="section-kicker">How it works</div>
-          <h2 id="workflow-title" class="section-heading medium">From evidence to a decision people can stand behind</h2>
-          <p class="section-lede">MIZAN is designed to reuse your existing governance work and connect it to a maintained decision record. The institution keeps responsibility for the approval.</p>
-          <ol class="workflow" aria-label="MIZAN six-step workflow">
-            <li><span>01</span><strong>Define</strong><p>Set the purpose, responsible owner, permitted actions and limits.</p></li>
-            <li><span>02</span><strong>Evidence</strong><p>Bring together existing policies, assessments, technical tests and operational information.</p></li>
-            <li><span>03</span><strong>Assess</strong><p>Ask relevant specialists to review the evidence and identify gaps or conditions.</p></li>
-            <li class="is-decision"><span>04</span><strong>Authorise</strong><p>An authorised person records the reasons, conditions and review date.</p></li>
-            <li><span>05</span><strong>Monitor</strong><p>Track agreed changes and signals that could affect the basis for approval.</p></li>
-            <li><span>06</span><strong>Reauthorise</strong><p>Decide whether to continue, restrict, suspend or withdraw the approval.</p></li>
-          </ol>
-          <div class="hero-actions"><a class="button secondary" href="how-it-works/">See the full workflow</a></div>
-        </div>
-      </section>
-
-      <section class="section light" aria-labelledby="sits-title">
-        <div class="container">
-          <div class="section-kicker">Where MIZAN sits</div>
-          <h2 id="sits-title" class="section-heading medium">Not another AI governance dashboard</h2>
-          <p class="section-lede">AI governance platforms check whether an AI system is tested, monitored and under policy control. MIZAN answers a narrower, later question: given that evidence, is this institution currently entitled and able to let this specific AI act on its behalf, and for how long. MIZAN sits after AI governance, not instead of it.</p>
-          <div class="handoff" aria-label="Relationship between AI governance tools and MIZAN">
-            <article class="handoff-box"><h3>AI governance and assurance tools</h3><p>Is the system safe, tested and monitored?</p></article>
-            <div class="handoff-arrow" aria-hidden="true">&rarr;</div>
-            <article class="handoff-box mizan"><h3>MIZAN</h3><p>Is the institution entitled to let it act, right now?</p></article>
-          </div>
-          <div class="hero-actions"><a class="button secondary" href="platform/#governance-comparison">See how MIZAN relates to existing tools</a></div>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="people-title">
-        <div class="container split-grid">
+      <section class="section light public-purpose-section" aria-labelledby="people-title">
+        <div class="container split-grid public-purpose-grid">
           <div>
             <div class="section-kicker">People and public purpose</div>
             <h2 id="people-title" class="section-heading medium">Keep people in control of consequential decisions</h2>
             <p class="section-lede">Public service AI should stay understandable, accessible and open to challenge. The approval record should define when staff must intervene, what decisions remain with people, and how concerns reach the responsible team.</p>
           </div>
-          <div class="note-card"><h3>Material change</h3><p>A material change is a change that could affect the basis for approval, such as a model update, a permission change, or a rise in complaints.</p></div>
-        </div>
-      </section>
-
-      <section class="section light" aria-labelledby="use-title">
-        <div class="container">
-          <div class="section-kicker">Use cases</div>
-          <h2 id="use-title" class="section-heading medium">Start with one clearly defined AI use</h2>
-          <div class="grid-2" style="margin-top:28px">
-            <article class="card"><h3>Government services.</h3><p>Define how a service assistant may explain guidance, support staff and route complex cases, while keeping final decisions with authorised officers.</p><div class="allowed-pair"><p><b>Allowed</b>Explain published guidance.</p><p><b>Not allowed</b>Make eligibility decisions.</p></div></article>
-            <article class="card"><h3>Education.</h3><p>Set clear boundaries for a student support assistant, including approved sources, escalation to staff and decisions it cannot make.</p><div class="allowed-pair"><p><b>Allowed</b>Answer routine questions.</p><p><b>Not allowed</b>Make consequential decisions.</p></div></article>
+          <div class="public-purpose-visual" aria-label="Public-service AI routes people back to responsible staff">
+            <img class="public-purpose-image" src="assets/mizan-public-purpose-city.webp" srcset="assets/mizan-public-purpose-city.webp 960w, assets/mizan-public-purpose-city@2x.webp 1600w" sizes="(max-width: 760px) calc(100vw - 48px), 46vw" width="960" height="541" alt="Connected Abu Dhabi skyline representing public-purpose digital infrastructure." loading="lazy" decoding="async">
           </div>
-          <div class="hero-actions"><a class="button secondary" href="use-cases/">Explore use cases</a></div>
         </div>
       </section>
 
@@ -182,6 +163,8 @@
         </div>
       </section>
 
+      <section class="section light" aria-labelledby="faq-title"><div class="container narrow"><div class="section-kicker">FAQ</div><h2 id="faq-title" class="section-heading medium">Quick answers before you get in touch</h2><div class="faq-list"><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-1">What does MIZAN do?</button><div class="faq-panel" id="faq-1" hidden><p>MIZAN records the evidence, conditions, owner, approval decision and review date for a specific institutional AI use.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-2">Who makes the approval decision?</button><div class="faq-panel" id="faq-2" hidden><p>The institution does. MIZAN is designed to make the decision basis clear and reviewable.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-3">Does MIZAN produce a score?</button><div class="faq-panel" id="faq-3" hidden><p>No. The decision is recorded in words, not a score.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-4">Can we use it today?</button><div class="faq-panel" id="faq-4" hidden><p>MIZAN is in development and exploring focused design-partner pilots. A pilot would start with one clearly defined AI use.</p></div></div></div></div></section>
+
       <section class="section pilot-band" aria-labelledby="pilot-title">
         <div class="container">
           <h2 id="pilot-title">Build the first case around your institution</h2>
@@ -189,28 +172,12 @@
           <p>What we would agree: scope and responsibilities; evidence and review requirements; pilot deliverables and acceptance criteria.</p>
           <div class="hero-actions" style="justify-content:center"><a class="button primary" href="contact/">Discuss a pilot</a></div>
         </div>
-      </section>
-
-      <section class="section" aria-labelledby="faq-title">
-        <div class="container">
-          <div class="section-kicker">FAQ</div>
-          <h2 id="faq-title" class="section-heading medium">Quick answers before you read further</h2>
-          <div class="faq-list">
-            <div class="faq-item"><button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-1">What does MIZAN do?</button><div class="faq-panel" id="faq-1"><p>MIZAN records the evidence, conditions, owner, approval decision and review date for a specific institutional AI use.</p></div></div>
-            <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-2">Who makes the approval decision?</button><div class="faq-panel" id="faq-2" hidden><p>The institution does. MIZAN is designed to make the decision basis clear and reviewable; it does not grant legal or statutory authority.</p></div></div>
-            <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-3">Does it replace our existing assessments?</button><div class="faq-panel" id="faq-3" hidden><p>No. MIZAN is designed to reuse evidence from existing risk, privacy, security and AI evaluation work.</p></div></div>
-            <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-4">Is this only for AI agents?</button><div class="faq-panel" id="faq-4" hidden><p>No. The method is useful wherever an institution needs a clear approval basis, bounded permissions, human supervision and review.</p></div></div>
-            <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-5">Can we use it today?</button><div class="faq-panel" id="faq-5" hidden><p>MIZAN is in development and exploring focused design-partner pilots. A pilot would start with one clearly defined AI use.</p></div></div>
-            <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-6">How would a pilot begin?</button><div class="faq-panel" id="faq-6" hidden><p>We would agree the scope, responsible owner, evidence to review, conditions to test, and how value will be measured.</p></div></div>
-          </div>
-        </div>
-      </section>
-    </main>
+      </section></main>
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div class="footer-brand"><a class="brand" href="./" aria-label="MIZAN home"><span>MIZAN</span><span class="arabic" lang="ar" dir="rtl">ميزان</span></a><p>MIZAN helps institutions connect AI evidence to accountable human decisions. Developed through the AI for Public Purpose Lab at Arrownex.</p></div>
-        <div><div class="footer-label">Explore MIZAN</div><nav class="footer-links" aria-label="Footer navigation"><a href="platform/">Platform</a><a href="how-it-works/">How it works</a><a href="use-cases/">Use cases</a><a href="research/">Research and method</a><a href="about/">About</a><a href="contact/">Contact</a><a href="ecosystem/">Supporting instruments</a><a href="privacy/">Privacy</a><a href="accessibility/">Accessibility</a><a href="terms/">Website terms</a></nav></div>
+        <div class="footer-brand"><a class="brand" href="./" aria-label="MIZAN home"><span class="brand-logo" aria-hidden="true"></span><span class="brand-text"><span>MIZAN</span><span class="arabic" lang="ar" dir="rtl">ميزان</span></span></a><p>MIZAN helps institutions connect AI evidence to accountable human decisions. Developed through the AI for Public Purpose Lab at Arrownex.</p></div>
+        <div><div class="footer-label">Explore MIZAN</div><nav class="footer-links" aria-label="Footer navigation"><a href="platform/">Platform</a><a href="how-it-works/">How it works</a><a href="research/">Research and method</a><a href="about/">About</a><a href="contact/">Contact</a><a href="ecosystem/">Supporting instruments</a><a href="privacy/">Privacy</a><a href="accessibility/">Accessibility</a><a href="terms/">Website terms</a></nav></div>
       </div>
       <div class="container footer-meta"><span>Clear, accountable decisions about AI use.</span><span>&copy; 2026 MIZAN</span></div>
     </footer>

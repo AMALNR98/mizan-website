@@ -1,0 +1,38 @@
+{
+  "name": "mizan-website",
+  "version": "1.0.0",
+  "description": "Static multi-page website for MIZAN - clear, accountable decisions about institutional AI use.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check:content": "node scripts/check-content-parity.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMALNR98/mizan-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AMALNR98/mizan-website/issues"
+  },
+  "homepage": "https://github.com/AMALNR98/mizan-website#readme",
+  "dependencies": {
+    "next": "^16.3.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.16.1",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "eslint": "^9.39.5",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.0"
+  }
+}

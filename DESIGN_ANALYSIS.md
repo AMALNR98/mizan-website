@@ -74,8 +74,8 @@ Arabic brand text should remain limited to the approved brand word `ميزان`,
 - Premium sticky navigation with transparent hero state and blurred navy scroll state.
 - Full-screen hero with three translucent authority/accountability/machine planes and an illuminated gold path.
 - Four failure-point problem section with restrained historical examples.
-- Four-layer architecture visual: mandate and law, MIZAN, agent control, substrate.
-- Authorisation record graph: public purpose, mandate, use case, authority envelope, named owner, evidence, capability, conditions, acceptance, expiry and change events.
+- High-level architecture visual that avoids exposing internal method structure.
+- Authorisation record graph with public-facing ownership, evidence and review concepts.
 - Permission lifecycle timeline: authorised, evidence ages, system changes, condition triggered, review required, re-authorise/condition/withdraw.
 - Evidence provenance interaction with node metadata.
 - MIZAN application mockup with no aggregate scores.
