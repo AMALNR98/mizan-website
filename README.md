@@ -23,7 +23,6 @@ The site is dependency-free: plain HTML, CSS and JavaScript.
 - `/`
 - `/platform/`
 - `/how-it-works/`
-- `/use-cases/`
 - `/research/`
 - `/about/`
 - `/contact/`
