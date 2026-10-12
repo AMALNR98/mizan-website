@@ -820,6 +820,39 @@ button { color: inherit; }
 
 .faq-panel[hidden] { display: none; }
 
+.section.light .faq-list,
+.section.alt .faq-list {
+  border-top-color: rgba(23, 32, 38, 0.12);
+}
+
+.section.light .faq-item,
+.section.alt .faq-item {
+  border-bottom-color: rgba(23, 32, 38, 0.12);
+}
+
+.section.light .faq-question,
+.section.alt .faq-question {
+  color: var(--color-text-primary);
+}
+
+.section.light .faq-question::after,
+.section.alt .faq-question::after {
+  color: var(--color-accent-strong);
+}
+
+.section.light .faq-question:hover,
+.section.light .faq-question[aria-expanded="true"],
+.section.alt .faq-question:hover,
+.section.alt .faq-question[aria-expanded="true"] {
+  color: var(--color-text-primary);
+  background: rgba(15, 154, 170, 0.09);
+}
+
+.section.light .faq-panel,
+.section.alt .faq-panel {
+  color: var(--color-text-secondary);
+}
+
 .watch-list {
   display: grid;
   gap: 14px;
