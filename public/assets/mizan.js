@@ -51,6 +51,52 @@ document.querySelectorAll(".faq-question").forEach((button) => {
 });
 
 const translations = new Map([
+  ["A decision may be recorded without a clear link to its evidence, limits and owner.", "قد يُسجَّل القرار دون ربط واضح بالأدلة التي تدعمه وحدوده والمسؤول عنه."],
+  ["A new model, policy, permission or incident may require the original decision to be reviewed.", "قد يستدعي نموذج أو سياسة أو صلاحية جديدة، أو وقوع حادثة، مراجعة القرار الأصلي."],
+  ["An AI system may perform well while important questions remain unanswered: who can approve its use, can the organisation supervise it, what must stay a human decision, and what happens if the system or its purpose changes.", "قد يحقق نظام الذكاء الاصطناعي أداءً جيداً بينما تبقى أسئلة مهمة دون إجابة: من يملك صلاحية الموافقة على استخدامه، وهل تستطيع المؤسسة الإشراف عليه، وما القرارات التي يجب أن تبقى بيد البشر، وماذا يحدث إذا تغير النظام أو الغرض منه."],
+  ["Arrownex provides the operating and delivery platform. The AI for Public Purpose Lab develops and tests the methods and product proposition. The institution using MIZAN keeps responsibility for its AI approval decisions.", "توفر أروِنكس منصة التشغيل والتنفيذ. ويطور مختبر الذكاء الاصطناعي للغرض العام المنهجيات وتصور المنتج ويختبرها. وتحتفظ المؤسسة التي تستخدم ميزان بمسؤولية قرارات الموافقة على استخدام الذكاء الاصطناعي."],
+  ["Bring relevant policies, assessments and technical reports into the approval record.", "اجمع السياسات والتقييمات والتقارير التقنية ذات الصلة في سجل الموافقة."],
+  ["Brings experience in privacy, AI governance and digital public infrastructure to MIZAN's design. As a doctoral researcher at UCL's Institute for Innovation and Public Purpose, he researches the relationship between digital infrastructure, institutions and legitimacy.", "يسهم في تصميم ميزان بخبراته في الخصوصية وحوكمة الذكاء الاصطناعي والبنية التحتية الرقمية العامة. وبصفته باحث دكتوراه في معهد الابتكار والغرض العام بكلية لندن الجامعية، يدرس العلاقة بين البنية التحتية الرقمية والمؤسسات والشرعية."],
+  ["Current approach", "النهج الحالي"],
+  ["Do not fill this out if you are human:", "إذا كنت شخصاً، فاترك هذا الحقل فارغاً:"],
+  ["If you contact MIZAN, the information you provide may be reviewed by the Arrownex team so they can respond. Formal pilot or customer terms should be agreed separately before confidential information is shared.", "إذا تواصلت مع ميزان، فقد يراجع فريق أروِنكس المعلومات التي تقدمها للرد عليك. ويجب الاتفاق بشكل منفصل على الشروط الرسمية للتجربة التطبيقية أو التعامل مع العميل قبل مشاركة معلومات سرية."],
+  ["Illustrative public examples are available for discussion, not as live deployments.", "تتوفر أمثلة توضيحية عامة للمناقشة، ولا تمثل تطبيقات قيد التشغيل."],
+  ["Isnad records where knowledge and evidence came from, who reviewed it, and when it needs updating.", "يسجل إسناد مصادر المعرفة والأدلة، ومن راجعها، ومتى تحتاج إلى تحديث."],
+  ["Keep specialist findings and required conditions visible to the decision owner.", "أبقِ نتائج مراجعة المتخصصين والشروط المطلوبة واضحة للمسؤول عن القرار."],
+  ["Leads Arrownex's technology delivery, partnerships and customer relationships, connecting the venture to engineering and operational capability.", "يقود التنفيذ التقني والشراكات وعلاقات العملاء في أروِنكس، ويربط المشروع بالقدرات الهندسية والتشغيلية."],
+  ["MIZAN aims for clear structure, keyboard-operable controls, readable text and responsive layouts across the public website.", "يسعى ميزان إلى توفير بنية واضحة، وعناصر تحكم قابلة للاستخدام بلوحة المفاتيح، ونصوص مقروءة، وتصميم متجاوب في جميع صفحات الموقع العام."],
+  ["MIZAN helps your team define the AI use, check the evidence, approve it, and review it when things change.", "يساعد ميزان فريقك على تحديد استخدام الذكاء الاصطناعي، وفحص الأدلة، والموافقة على الاستخدام، ومراجعته عند حدوث تغييرات."],
+  ["MIZAN is being developed through Arrownex's AI for Public Purpose Lab in the UAE. The Lab brings applied research and institutional assurance into practical AI delivery for government and regulated organisations.", "يُطوَّر ميزان من خلال مختبر الذكاء الاصطناعي للغرض العام في أروِنكس بدولة الإمارات العربية المتحدة. ويجمع المختبر بين البحث التطبيقي والضمان المؤسسي لتطبيق الذكاء الاصطناعي عملياً في الجهات الحكومية والمؤسسات الخاضعة للتنظيم."],
+  ["MIZAN is being developed to help institutions connect an AI use to the evidence, people and conditions that support its approval. The record is designed to stay reviewable as the system and its operating environment change.", "يُطوَّر ميزان لمساعدة المؤسسات على ربط استخدام الذكاء الاصطناعي بالأدلة والأشخاص والشروط التي تدعم الموافقة عليه. وصُمم السجل ليظل قابلاً للمراجعة مع تغير النظام وبيئة تشغيله."],
+  ["MIZAN is designed to use evidence from existing risk, privacy, security and AI evaluation processes. Deployment requirements should be agreed privately for each pilot.", "صُمم ميزان للاستفادة من الأدلة الناتجة عن عمليات تقييم المخاطر والخصوصية والأمن والذكاء الاصطناعي القائمة. ويجب الاتفاق على متطلبات النشر بشكل خاص لكل تجربة تطبيقية."],
+  ["MIZAN's wider research and development programme includes four supporting instruments. Their role is to strengthen an approval case for a specific AI use. Availability and pilot scope should be agreed with the team.", "يتضمن برنامج البحث والتطوير الأوسع لميزان أربع أدوات داعمة، تهدف إلى تعزيز ملف الموافقة على استخدام محدد للذكاء الاصطناعي. ويجب الاتفاق مع الفريق على إتاحتها ونطاق التجربة التطبيقية."],
+  ["Policies, tests and reviews often sit in different documents and systems.", "غالباً ما تتوزع السياسات والاختبارات والمراجعات بين وثائق وأنظمة مختلفة."],
+  ["Public pages are provided for general information and discussion. Formal pilot scope, responsibilities, confidentiality and data handling should be agreed in writing before work begins.", "تُقدَّم الصفحات العامة للمعلومات والمناقشة. ويجب الاتفاق كتابةً على النطاق الرسمي للتجربة التطبيقية والمسؤوليات والسرية والتعامل مع البيانات قبل بدء العمل."],
+  ["Public service AI should stay understandable, accessible and open to challenge. The approval record should define when staff must intervene, what decisions remain with people, and how concerns reach the responsible team.", "يجب أن يظل الذكاء الاصطناعي في الخدمات العامة مفهوماً ومتاحاً للجميع وقابلاً للاعتراض على قراراته. وينبغي أن يحدد سجل الموافقة متى يجب على الموظفين التدخل، وما القرارات التي تبقى بيد البشر، وكيف تصل المخاوف إلى الفريق المسؤول."],
+  ["Record the purpose, responsible owner, permitted actions, limits and review date.", "سجّل الغرض والمسؤول عن القرار والإجراءات المسموح بها والحدود وتاريخ المراجعة."],
+  ["Show what was known, what was reviewed, who decided, and the conditions attached.", "وضّح المعلومات التي كانت متاحة، وما تمت مراجعته، ومن اتخذ القرار، والشروط المرتبطة به."],
+  ["Source, owner, review history and update needs remain visible so the decision basis can be reconstructed.", "تبقى المصادر والمسؤول وسجل المراجعات ومتطلبات التحديث واضحة، بما يتيح تتبع أساس القرار."],
+  ["Start with one AI use, one accountable owner and an agreed operating environment. Together, we can map the evidence, define the conditions for approval and agree how the pilot's value will be measured.", "ابدأ باستخدام واحد للذكاء الاصطناعي، ومسؤول واحد عن القرار، وبيئة تشغيل متفق عليها. معاً، يمكننا تحديد الأدلة وشروط الموافقة والاتفاق على كيفية قياس قيمة التجربة التطبيقية."],
+  ["Tell us what you are considering, who would use it, and what decisions it may support. We can discuss the evidence, responsibilities and scope of a focused pilot.", "أخبرنا بالاستخدام الذي تفكر فيه، ومن سيستخدمه، والقرارات التي قد يدعمها. يمكننا مناقشة الأدلة والمسؤوليات ونطاق تجربة تطبيقية مركزة."],
+  ["The methodology draws on public sector guidance and research on accountability, institutional capability and AI assurance. Pilot work will test whether the approach produces clearer decisions, reuses existing evidence and identifies when review is needed.", "تستند المنهجية إلى إرشادات القطاع العام والبحوث المتعلقة بالمساءلة والقدرة المؤسسية وضمان الذكاء الاصطناعي. وستختبر التجارب التطبيقية ما إذا كان هذا النهج يؤدي إلى قرارات أوضح، ويعيد استخدام الأدلة القائمة، ويحدد متى تكون المراجعة مطلوبة."],
+  ["The site uses semantic headings, text-based example records, labelled form controls, accessible FAQ buttons and visible focus states. If you find an accessibility issue, contact the team through the enquiry form.", "يستخدم الموقع عناوين ذات بنية دلالية، وسجلات نموذجية نصية، وحقول نماذج ذات تسميات، وأزرار أسئلة شائعة ميسّرة، ومؤشرات تركيز مرئية. إذا واجهت مشكلة في إتاحة الوصول، فتواصل مع الفريق عبر نموذج الاستفسار."],
+  ["This website explains a product and method currently in development. Illustrative examples are not live deployments, legal advice or final product interfaces.", "يعرض هذا الموقع منتجاً ومنهجاً قيد التطوير. ولا تمثل الأمثلة التوضيحية تطبيقات قيد التشغيل أو مشورة قانونية أو واجهات نهائية للمنتج."],
+  ["We use enquiry details to respond to messages sent through this website. Please do not include sensitive personal data or confidential case information in the form.", "نستخدم تفاصيل الاستفسارات للرد على الرسائل المرسلة عبر هذا الموقع. يرجى عدم تضمين بيانات شخصية حساسة أو معلومات سرية عن الحالات في النموذج."],
+  ["We will use these details to respond to your enquiry. Please do not include sensitive personal data or confidential case information. Read our", "سنستخدم هذه التفاصيل للرد على استفسارك. يرجى عدم تضمين بيانات شخصية حساسة أو معلومات سرية عن الحالات. اطّلع على"],
+  ["What we would agree: scope and responsibilities; evidence and review requirements; pilot deliverables and acceptance criteria.", "ما سنتفق عليه: النطاق والمسؤوليات، ومتطلبات الأدلة والمراجعة، ومخرجات التجربة التطبيقية ومعايير قبولها."],
+  ["privacy notice", "إشعار الخصوصية"],
+  ["MIZAN helps institutions connect AI evidence to accountable human decisions. Developed through the AI for Public Purpose Lab at Arrownex.", "يساعد ميزان المؤسسات على ربط أدلة الذكاء الاصطناعي بقرارات بشرية مسؤولة. يُطوَّر من خلال مختبر الذكاء الاصطناعي للغرض العام في أروِنكس."],
+  ["MIZAN home", "الصفحة الرئيسية لميزان"],
+  ["Primary navigation", "التنقل الرئيسي"],
+  ["Footer navigation", "روابط تذييل الصفحة"],
+  ["Open navigation", "فتح قائمة التنقل"],
+  ["MIZAN introduction video", "فيديو تعريفي عن ميزان"],
+  ["MIZAN introduction video in English", "فيديو تعريفي عن ميزان باللغة الإنجليزية"],
+  ["Illustrative MIZAN approval record", "سجل موافقة توضيحي لميزان"],
+  ["Public-service AI routes people back to responsible staff", "يوجّه الذكاء الاصطناعي في الخدمات العامة الأشخاص إلى الموظفين المسؤولين"],
+  ["Connected Abu Dhabi skyline representing public-purpose digital infrastructure.", "أفق أبوظبي المترابط الذي يمثل البنية التحتية الرقمية للغرض العام."],
+  ["Page not found", "الصفحة غير موجودة"],
+  ["Continue", "متابعة"],
   ["Skip to content", "انتقل إلى المحتوى"],
   ["Home", "الرئيسية"],
   ["Platform", "المنصة"],
@@ -275,6 +321,14 @@ function translateSubtree(root) {
     return;
   }
   if (root.nodeType !== Node.ELEMENT_NODE && root.nodeType !== Node.DOCUMENT_FRAGMENT_NODE) return;
+  if (root.nodeType === Node.ELEMENT_NODE) {
+    [root, ...root.querySelectorAll("*")].forEach((element) => {
+      ["aria-label", "alt", "title", "placeholder"].forEach((attribute) => {
+        const value = element.getAttribute(attribute);
+        if (translations.has(value)) element.setAttribute(attribute, translations.get(value));
+      });
+    });
+  }
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   let node;
   while ((node = walker.nextNode())) {
