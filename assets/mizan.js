@@ -343,7 +343,7 @@ if (contactForm) {
     if (note) note.textContent = savedLanguage === "ar" ? "جارٍ إرسال الاستفسار..." : "Sending enquiry...";
 
     try {
-      const response = await fetch(contactForm.getAttribute("action") || "/contact/", {
+      const response = await fetch(contactForm.getAttribute("action") || "/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString()
